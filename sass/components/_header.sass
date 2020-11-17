@@ -1,1 +1,74 @@
+.header
+  background-color: $true-white
+  &__logo
+  &__search
+    margin-right: auto
+    margin-left: 108px
+  &__user
 
+  &-top
+    padding: 40px 0
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &-nav
+    background-color: $bg-dark
+
+.logo
+  &__image
+
+.search
+  position: relative
+  border-radius: 6px
+  overflow: hidden
+  height: 40px
+  &__input
+    width: 350px
+    height: 100%
+    background-color: $bg-light
+    padding-left: 23px
+    padding-right: 70px
+    border: none
+    font-size: 12px
+    &::placeholder
+      font-size: 12px
+  &__button
+    position: absolute
+    top: 0
+    right: 0
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    width: 65px
+    height: 100%
+    cursor: pointer
+    transition: background-color 0.2s ease
+    z-index: 2
+    &:hover
+      background-color: darken($accent, 10%)
+
+.user
+  display: flex
+  align-items: center
+  +link-reset
+  &__avatar
+    width: 40px
+    height: 40px
+    border-radius: 50%
+  &__name
+    margin-left: 18px
+    font-size: 14px
+
+.nav
+  padding: 30px 0
+  &__list
+    margin: 0
+    padding: 0
+    display: flex
+    align-items: center
+    justify-content: space-between
+    list-style: none
+  &__item
+    color: $true-white
+  &__link
+    +link-reset
