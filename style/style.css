@@ -566,11 +566,11 @@ ul, ol {
   color: #333333;
 }
 
-.breadcrumb-list__item:not(.breadcrumb-list__item:last-child) {
+.breadcrumb-list__item:not(:last-child) {
   margin-right: 3px;
 }
 
-.breadcrumb-list__item:not(.breadcrumb-list__item:last-child)::after {
+.breadcrumb-list__item:not(:last-child)::after {
   content: '/';
   display: inline-block;
 }
