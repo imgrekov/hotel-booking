@@ -750,6 +750,9 @@ ul, ol {
     font-size: 10px;
     line-height: 15px;
   }
+  .hotel-info__offer {
+    margin-left: 8px;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -770,9 +773,6 @@ ul, ol {
         flex-basis: auto;
   }
   .hotel-info__wrapper {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -783,10 +783,12 @@ ul, ol {
             order: -1;
     margin-bottom: 0;
     margin-left: 0;
+    margin-right: 14px;
   }
   .hotel-info__stars {
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
+    margin-left: auto;
   }
   .hotel-info__name {
     -ms-flex-preferred-size: 100%;
