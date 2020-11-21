@@ -18,6 +18,9 @@
 
 .logo
   width: 177px
+  +trs(transform)
+  &:hover
+    transform: scale(1.15)
   &__image
 
 .search
@@ -53,7 +56,10 @@
 .user
   display: flex
   align-items: center
+  +trs(color)
   +link-reset
+  &:hover
+    color: $accent
   &__avatar
     width: 40px
     height: 40px
@@ -73,6 +79,9 @@
     list-style: none
   &__item
     color: $true-white
+    &:hover
+      +trs(color)
+      color: $accent
   &__link
     padding: 31px 0
     text-transform: uppercase

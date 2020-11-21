@@ -431,6 +431,15 @@ ul, ol {
 
 .logo {
   width: 177px;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.logo:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
 }
 
 .search {
@@ -498,8 +507,14 @@ ul, ol {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
   color: inherit;
   text-decoration: none;
+}
+
+.user:hover {
+  color: #ec1f46;
 }
 
 .user__avatar {
@@ -534,6 +549,12 @@ ul, ol {
 
 .nav__item {
   color: #fff;
+}
+
+.nav__item:hover {
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  color: #ec1f46;
 }
 
 .nav__link {
