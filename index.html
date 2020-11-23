@@ -113,7 +113,7 @@
       <!-- /.breadcrumb -->
       <section class="hotel">
         <div class="container">
-          <div class="hotel__wrapper">
+          <div class="hotel__info-wrapper">
             <div class="hotel-info">
               <div class="hotel-info__wrapper">
                 <div class="hotel-info__stars stars">
@@ -146,12 +146,61 @@
             </div>
             <!-- /.hotel-rate -->
           </div>
-          <!-- /.hotel__info -->
+          <!-- /.hotel__info-wrapper -->
+          <div class="hotel-grid">
+            <div class="hotel-slider swiper-container">
+              <div class="swiper-wrapper hotel-slider__wrapper">
+                <div class="swiper-slide hotel-slider__slide">
+                  <img src="./images/hotel-slider/hotel-preview-1.jpg" alt="" />
+                </div>
+                <!-- /.swiper-slide hotel-slider__slide -->
+                <div class="swiper-slide hotel-slider__slide">
+                  <img src="./images/hotel-slider/hotel-preview-2.jpg" alt="" />
+                </div>
+                <!-- /.swiper-slide hotel-slider__slide -->
+                <div class="swiper-slide hotel-slider__slide">
+                  <img src="./images/hotel-slider/hotel-preview-3.jpg" alt="" />
+                </div>
+                <!-- /.swiper-slide hotel-slider__slide -->
+                <div class="swiper-slide hotel-slider__slide">
+                  <img src="./images/hotel-slider/hotel-preview-4.jpg" alt="" />
+                </div>
+                <!-- /.swiper-slide hotel-slider__slide -->
+                <div class="swiper-slide hotel-slider__slide">
+                  <img src="./images/hotel-slider/hotel-preview-5.jpg" alt="" />
+                </div>
+                <!-- /.swiper-slide hotel-slider__slide -->
+              </div>
+              <!-- /.swiper-wrapper hotel-slider__wrapper -->
+              <div class="hotel-slider__nav hotel-slider__nav--prev">
+                <svg xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M19.634 6.616a1.25 1.25 0 010 1.768L13.018 15l6.616 6.616a1.25 1.25 0 01-1.768 1.768l-7.5-7.5a1.25 1.25 0 010-1.768l7.5-7.5a1.25 1.25 0 011.768 0z"
+                  />
+                </svg>
+              </div>
+              <div class="hotel-slider__nav hotel-slider__nav--next">
+                <svg xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M10.366 6.616a1.25 1.25 0 011.768 0l7.5 7.5a1.25 1.25 0 010 1.768l-7.5 7.5a1.25 1.25 0 01-1.768-1.768L16.982 15l-6.616-6.616a1.25 1.25 0 010-1.768z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <!-- /.hotel-slider swiper-container -->
+          </div>
+          <!-- /.hotel-grid -->
         </div>
         <!-- /.container -->
       </section>
       <!-- /.hotel -->
     </main>
     <!-- /.main -->
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/app.js"></script>
   </body>
 </html>
