@@ -10,6 +10,11 @@ const hotelSlider = new Swiper('.hotel-slider', {
     nextEl: '.hotel-slider__nav--next',
     prevEl: '.hotel-slider__nav--prev',
   },
+
+  // Disable preloading of all images
+  preloadImages: false,
+  // Enable lazy loading
+  lazy: true,
 })
 
 // Функция ymaps.ready() будет вызвана, когда
