@@ -1087,6 +1087,12 @@ ul, ol {
   border: none;
   background-color: #ec1f46;
   color: #fff;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: #c71134;
 }
 
 .header {
