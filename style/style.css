@@ -1808,6 +1808,7 @@ ul, ol {
     height: 200px;
   }
   .hotel-aside {
+    width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
