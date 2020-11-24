@@ -39,7 +39,7 @@
     &__count
   &-grid
     display: flex
-    justify-content: flex-start
+    justify-content: space-between
   &-slider
     margin: 0
     flex: 0 0 728px
@@ -81,6 +81,16 @@
         left: 18px
       &--next
         right: 18px
+  &-aside
+    display: flex
+    flex: 0 0 350px
+    flex-direction: column
+    // align-items: center
+    justify-content: space-between
+    &__options
+      width: 100%
+    &__map
+      width: 100%
 
 .stars
   display: inline-flex
@@ -109,3 +119,73 @@
   &__max
     font-size: 10px
     line-height: 1
+
+.options
+  min-width: 350px
+  font-family: 'Nunito', sans-serif
+  padding: 28px
+  border-radius: 8px
+  background: $bg-dark
+  color: $true-white
+  &-header
+    display: flex
+    margin-bottom: 10px
+    align-items: center
+    justify-content: space-between
+    &__price
+      padding-right: 20px
+      display: flex
+      flex-direction: column
+      span
+        font-size: 12px
+        line-height: 1
+      strong
+        font-size: 24px
+        line-height: 33px
+    &__spec
+      margin-bottom: 8px
+      font-size: 12px
+      line-height: 16px
+      display: inline-flex
+      align-items: center
+      justify-content: space-between
+      &:last-child
+        margin-bottom: 0
+      span
+        margin-left: 8px
+      &-list
+        display: flex
+        flex-direction: column
+  &-booking
+    display: flex
+    margin-bottom: 16px
+    align-items: center
+    justify-content: space-between
+    &__text
+      font-weight: 600
+      font-size: 18px
+      line-height: 25px
+    &__tel
+      display: flex
+      align-items: center
+      font-weight: 600
+      font-size: 18px
+      line-height: 25px
+      +link-reset
+      span
+        margin-left: 8px
+  &-footer
+    &__button
+      border-radius: 4px
+      width: 100%
+      padding: 13px
+      font-weight: 600
+      font-size: 14px
+      line-height: 19px
+
+.map
+  min-width: 350px
+  height: 210px
+  overflow: hidden
+  border-radius: 8px
+  background-color: $secondary

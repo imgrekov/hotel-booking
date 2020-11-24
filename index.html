@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Best Tour Plan — Hotel Booking</title>
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=cea83dff-e384-4956-a843-e916fbcf61a9&lang=ru_RU"
+      type="text/javascript"
+    ></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&family=Nunito:wght@400;600;700&display=swap"
@@ -148,7 +152,7 @@
           </div>
           <!-- /.hotel__info-wrapper -->
           <div class="hotel-grid">
-            <div class="hotel-slider swiper-container">
+            <div class="hotel-slider swiper-container hotel__slider">
               <div class="swiper-wrapper hotel-slider__wrapper">
                 <div class="swiper-slide hotel-slider__slide">
                   <img src="./images/hotel-slider/hotel-preview-1.jpg" alt="" />
@@ -181,6 +185,7 @@
                   />
                 </svg>
               </div>
+              <!-- /.hotel-slider__nav -->
               <div class="hotel-slider__nav hotel-slider__nav--next">
                 <svg xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -190,8 +195,54 @@
                   />
                 </svg>
               </div>
+              <!-- /.hotel-slider__nav -->
             </div>
             <!-- /.hotel-slider swiper-container -->
+            <div class="hotel-aside">
+              <div class="hotel-aside__options options">
+                <div class="options-header">
+                  <div class="options-header__price">
+                    <span>price starts as</span>
+                    <strong>$ 8,500</strong>
+                    <span>per room / night</span>
+                  </div>
+                  <!-- /.options-header__price -->
+                  <div class="options-header__spec-list">
+                    <div class="options-header__spec">
+                      <img src="./images/user.svg" alt="Icon: guest" />
+                      <span>2 x Guests</span>
+                    </div>
+                    <!-- /.options-header__spec -->
+                    <div class="options-header__spec">
+                      <img src="./images/home.svg" alt="Icon: room" />
+                      <span>1 x Room</span>
+                    </div>
+                    <!-- /.options-header__spec -->
+                  </div>
+                  <!-- /.options-header__spec-list -->
+                </div>
+                <!-- /.options-header -->
+                <div class="options-booking">
+                  <div class="options-booking__text">Quick Booking</div>
+                  <!-- /.options-booking__text -->
+                  <a href="#!" class="options-booking__tel">
+                    <img src="./images/phone-call.svg" alt="Icon: tel" />
+                    <span>12100</span>
+                  </a>
+                  <!-- /.options-booking__tel -->
+                </div>
+                <!-- /.options-booking -->
+                <div class="options-footer">
+                  <button class="button options-footer__button">View Other Options</button>
+                  <!-- /.button options-footer__button -->
+                </div>
+                <!-- /.options-footer -->
+              </div>
+              <!-- /.hotel-aside__options options -->
+              <div class="hotel-aside__map map" id="hotel-map"></div>
+              <!-- /.hotel-aside__map map -->
+            </div>
+            <!-- /.hotel-aside -->
           </div>
           <!-- /.hotel-grid -->
         </div>

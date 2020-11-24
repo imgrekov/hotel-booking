@@ -1,6 +1,8 @@
 @media screen and ( max-width: 1200px )
   .container
     max-width: 990px
+  .hotel-slider
+    flex: 0 0 584px
 @media screen and ( max-width: 992px )
   .container
     max-width: 730px
@@ -14,6 +16,25 @@
     &__link
       font-size: 12px
       line-height: 15px
+  .hotel
+    &-grid
+      flex-wrap: wrap
+    &-slider
+      flex: 0 0 100%
+    &-aside
+      flex-direction: row
+      flex: 0 0 100%
+      &__options
+        width: auto
+        margin-right: 20px
+    &__slider
+      margin-bottom: 30px
+  .options
+    min-width: 340px
+  .map
+    min-width: auto
+    // width: 340px
+    // height: 210px
 @media screen and ( max-width: 768px )
   .container
     max-width: 576px
@@ -36,6 +57,11 @@
     &-info
       &__offer
         margin-left: 8px
+
+    &-aside
+      &__options
+  .options
+    min-width: 50%
 @media screen and ( max-width: 576px )
   .container
     max-width: 480px
@@ -43,24 +69,6 @@
     display: none
   .logo
     width: 100px
-  .hotel
-    &-rate
-      display: none
-    &-info
-      flex-basis: auto
-      &__wrapper
-        align-items: center
-      &__offer
-        order: -1
-        margin-bottom: 0
-        margin-left: 0
-        margin-right: 14px
-      &__stars
-        flex-basis: auto
-        margin-left: auto
-      &__name
-        flex-basis: 100%
-        margin-top: 10px
   .header
     &-top
       // Добавил от себя
@@ -82,6 +90,40 @@
       width: 16px
       height: 1px
       background-color: $black
+  .hotel
+    &-rate
+      display: none
+    &-info
+      flex-basis: auto
+      &__wrapper
+        align-items: center
+      &__offer
+        order: -1
+        margin-bottom: 0
+        margin-left: 0
+        margin-right: 14px
+      &__stars
+        flex-basis: auto
+        margin-left: auto
+      &__name
+        flex-basis: 100%
+        margin-top: 10px
+    &__slider
+      margin-bottom: 20px
+    &-slider
+      &__slide
+        height: 200px
+    &-aside
+      flex-direction: column
+      &__options
+        margin-bottom: 20px
+        margin-right: 0
+      &__map
+        width: auto
+  .options, .map
+    min-width: 300px
+    width: 100%
+    flex-shrink: 1
 
 @media screen and ( max-width: 480px )
   .container
