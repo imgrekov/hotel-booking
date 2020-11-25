@@ -32,9 +32,11 @@
   .options
     min-width: 340px
   .map
-    min-width: auto
-    // width: 340px
-    // height: 210px
+    width: 100%
+  .newsletter
+    padding: 92px 0
+    &__container
+      max-width: 700px
 @media screen and ( max-width: 768px )
   .container
     max-width: 576px
@@ -57,9 +59,6 @@
     &-info
       &__offer
         margin-left: 8px
-
-    &-aside
-      &__options
   .options
     min-width: 50%
 @media screen and ( max-width: 576px )
@@ -71,7 +70,6 @@
     width: 100px
   .header
     &-top
-      // Добавил от себя
       padding: 20px 0
       &__burger
         display: block
@@ -120,15 +118,38 @@
         margin-bottom: 20px
         margin-right: 0
       &__map
-        width: auto
+        width: 100%
   .options, .map
     min-width: 300px
     width: 100%
     flex-shrink: 1
 
+  .newsletter
+    padding: 76px 0 83px 0
+    &__container
+      max-width: 480px
+    &__wrapper
+      flex-direction: column
+      align-items: start
+    &-text
+      margin-right: 0
+      margin-bottom: 37px
+      &__text
+        font-size: 20px
+        line-height: 25px
+      &__storng
+        display: block
+        font-size: 30px
+        line-height: 38px
+        text-transform: uppercase
+  .subscribe
+    width: 100%
+
 @media screen and ( max-width: 480px )
   .container
     max-width: 92%
     padding: 0
+  .options, .map
+    min-width: auto
 
 // @media screen and ( min-width: 320px ) and ( max-width: 480px )
