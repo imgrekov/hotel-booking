@@ -1653,7 +1653,7 @@ ul, ol {
 
 .newsletter {
   position: relative;
-  padding: 98px 0 87px 0;
+  padding: 98px 0 87px;
   overflow: hidden;
   background: #0A223D url(../images/newsletter/newsletter-bg.jpg);
   background-repeat: no-repeat;
@@ -1879,8 +1879,7 @@ ul, ol {
 }
 
 .activities {
-  padding-top: 60px;
-  padding-bottom: 100px;
+  padding: 60px 0 100px;
 }
 
 .activities__title {
@@ -2038,6 +2037,9 @@ ul, ol {
   }
   .map {
     min-width: auto;
+  }
+  .newsletter {
+    padding: 92px 0;
   }
   .newsletter__container {
     max-width: 700px;
@@ -2227,6 +2229,10 @@ ul, ol {
     -ms-flex-negative: 1;
         flex-shrink: 1;
   }
+  .newsletter {
+    padding: 76px 0 83px;
+    background-color: red;
+  }
   .newsletter__container {
     max-width: 480px;
   }
@@ -2245,6 +2251,9 @@ ul, ol {
   }
   .subscribe {
     width: 100%;
+  }
+  .reviews {
+    padding: 40px 0 50px;
   }
   .reviews__title {
     margin: 0 auto 42px auto;
@@ -2272,6 +2281,14 @@ ul, ol {
     -webkit-transform: translate(50%, 0);
             transform: translate(50%, 0);
     margin-right: -100px;
+  }
+  .activities {
+    padding: 40px 0 60px;
+  }
+  .activities__title {
+    margin-bottom: 36px;
+    font-size: 18px;
+    line-height: 23px;
   }
   .activities-wrapper {
     -webkit-box-orient: vertical;
