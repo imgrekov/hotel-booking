@@ -36,6 +36,12 @@ const reviewsSlider = new Swiper('.reviews-slider', {
   },
 })
 
+let newAnimation = new Motus.Animation({
+  $el: document.querySelector('.newsletter'),
+  keyframes: [{ backgroundPositionY: 90 }, { backgroundPositionY: 20 }],
+})
+Motus.addAnimation(newAnimation)
+
 ymaps.ready(init)
 function init() {
   const hotelMap = new ymaps.Map('hotel-map', {

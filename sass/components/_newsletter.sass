@@ -1,7 +1,12 @@
 .newsletter
   position: relative
   padding: 98px 0 87px 0
-  background: $bg-dark url(../images/newsletter/newsletter-bg.jpg) no-repeat center / cover
+  overflow: hidden
+  background: $bg-dark url(../images/newsletter/newsletter-bg.jpg)
+  background-repeat: no-repeat
+  background-position-y: center
+  background-position-x: center
+  background-size: cover
   &::before
     content: ''
     position: absolute
