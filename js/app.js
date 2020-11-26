@@ -17,8 +17,25 @@ const hotelSlider = new Swiper('.hotel-slider', {
   lazy: true,
 })
 
-// Функция ymaps.ready() будет вызвана, когда
-// загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+const reviewsSlider = new Swiper('.reviews-slider', {
+  loop: true,
+
+  autoHeight: true,
+
+  navigation: {
+    nextEl: '.reviews-wrapper__nav--next',
+    prevEl: '.reviews-wrapper__nav--prev',
+  },
+  breakpoints: {
+    320: {
+      spaceBetween: 10,
+    },
+    768: {
+      spaceBetween: 0,
+    },
+  },
+})
+
 ymaps.ready(init)
 function init() {
   const hotelMap = new ymaps.Map('hotel-map', {

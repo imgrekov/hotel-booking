@@ -39,9 +39,25 @@
   .newsletter
     &__container
       max-width: 700px
+  .reviews
+    &-slider
+      &__item
+        padding: 0 60px 30px
+        width: 580px
+        &::after
+          right: 15px
+          bottom: 125px
+    &-wrapper
+      &__nav
+        &:focus
+          outline: none
+        &--prev
+          left: 10px
+        &--next
+          right: 10px
 @media screen and ( max-width: 768px )
   .container
-    max-width: 576px
+    max-width: 580px
     width: 92%
   .header
     &-top
@@ -63,6 +79,25 @@
         margin-left: 8px
   .options
     min-width: 50%
+  .reviews
+    &__title
+      margin-bottom: 50px
+      font-size: 30px
+      line-height: 38px
+    &-slider
+      &__item
+        width: 100%
+        &::before
+          display: none
+      &__text
+        &::after
+          display: none
+    &-wrapper
+      &__nav
+        &--prev
+          left: -40px
+        &--next
+          right: -40px
 @media screen and ( max-width: 576px )
   .container
     max-width: 480px
@@ -138,6 +173,29 @@
 
   .subscribe
     width: 100%
+
+  .reviews
+    &__title
+      margin: 0 auto 42px auto
+      max-width: 235px
+      font-size: 18px
+      line-height: 23px
+    &-slider
+      &__item
+        padding: 30px
+        padding-top: 0
+    &-wrapper
+      &__nav
+        top: 30px
+        transform: translateY(0)
+        &--prev
+          left: 50%
+          transform: translate(-50%, 0)
+          margin-left: -100px
+        &--next
+          right: 50%
+          transform: translate(50%, 0)
+          margin-right: -100px
 
 @media screen and ( max-width: 480px )
   .container

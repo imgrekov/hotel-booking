@@ -1,0 +1,92 @@
+.reviews
+  position: relative
+  padding-top: 40px
+  padding-bottom: 70px
+  &-wrapper
+    position: relative
+    &__nav
+      position: absolute
+      z-index: 33
+      top: 50%
+      transform: translateY(-50%)
+      &:hover
+        svg
+          fill: $accent
+      &:focus
+        outline: 1px dotted $accent
+      &--prev,
+      &--next
+        svg
+          height: 30px
+          width: 30px
+          fill: #828282
+          +trs(fill)
+      &--prev
+        left: 18px
+      &--next
+        right: 18px
+  &__title
+    font-size: 36px
+    line-height: 45px
+    text-align: center
+    text-transform: uppercase
+    margin-bottom: 70px
+  &-slider
+    &__wrapper
+    &__slide
+    &__item
+      position: relative
+      margin: 45px auto 0 auto
+      padding: 0 100px 30px
+      width: 730px
+      border-radius: 8px
+      text-align: center
+      background-color: $true-white
+      z-index: 2
+      &::before
+        content: ''
+        position: absolute
+        top: 10px
+        left: 64px
+        display: inline-block
+        width: 70px
+        height: 47px
+        z-index: -1
+        background: url('../images/reviews/quote-before.svg') no-repeat center / cover
+    &__profile
+      margin-bottom: 32px
+    &__image
+      margin-top: -45px
+      margin-bottom: 10px
+      width: 90px
+      height: 90px
+      overflow: hidden
+      border-radius: 100%
+    &__name
+      font-size: 12px
+      line-height: 15px
+      color: $accent
+    &__date
+      display: inline-block
+      margin-bottom: 4px
+      font-size: 10px
+      line-height: 13px
+      color: $true-black
+    &__stars
+      justify-content: center
+    &__text
+      position: relative
+      margin: 0
+      font-size: 12px
+      line-height: 160%
+      text-align: justify
+      &::after
+        content: ''
+        position: absolute
+        right: -50px
+        top: -10px
+        display: inline-block
+        width: 70px
+        height: 47px
+        z-index: -1
+        background: url('../images/reviews/quote-after.svg') no-repeat center / cover
