@@ -1,0 +1,92 @@
+
+.packages
+  padding: 40px 0 70px 0
+  &__title
+    margin-bottom: 65px
+    font-size: 36px
+    line-height: 45px
+    text-align: center
+    text-transform: uppercase
+  &-wrapper
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: repeat(2, 1fr)
+    grid-gap: 30px
+  &-card
+    display: flex
+    flex-direction: column
+    width: 350px
+    max-height: 500px
+    border-radius: 8px
+    overflow: hidden
+    background-color: $bg-dark
+    color: $true-white
+    &--wide
+      flex-direction: row
+      align-items: center
+      width: 730px
+      grid-column: span 2
+      .packages
+        &-card
+          &__image
+            width: 50%
+            height: auto
+          &-info
+            padding: 10px 21px 10px 43px
+            width: 50%
+            &__stars
+              margin-bottom: 5px
+            &__title
+              margin-bottom: 24px
+            &__desc
+              margin-bottom: 30px
+            &__spec
+              &-list
+                margin-bottom: 30px
+    &__image
+      height: 50%
+      flex-shrink: 0
+    &-info
+      padding: 30px 20px 30px 32px
+      &__title
+        margin-bottom: 23px
+        font-size: 18px
+        line-height: 23px
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+      &__desc
+        margin-bottom: 34px
+        font-size: 14px
+        line-height: 160%
+      &__spec
+        margin-bottom: 11px
+        justify-content: flex-start
+        font-size: 12px
+        line-height: 15px
+        &:last-child
+          margin-bottom: 0
+        &-list
+          margin-bottom: 24px
+      &__footer
+        display: flex
+        align-items: flex-end
+        justify-content: space-between
+      &-price
+        margin-right: 10px
+        &__old
+          display: block
+          margin-bottom: 5px
+          font-size: 14px
+          line-height: 18px
+          text-decoration-line: line-through
+        &__current
+          display: block
+          font-size: 24px
+          line-height: 30px
+      &__button
+        padding: 11px 26px
+        font-family: 'Nunito', sans-serif
+        font-weight: 600
+        font-size: 14px
+        line-height: 19px

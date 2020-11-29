@@ -6,6 +6,29 @@
   .newsletter
     &__container
       max-width: 730px
+  .packages
+    &-wrapper
+    &-card
+      width: 300px
+      height: 460px
+      &--wide
+        width: 630px
+        .packages
+          &-card
+            &__image
+            &-info
+              &__stars
+              &__title
+              &__desc
+                white-space: nowrap
+                overflow: hidden
+                text-overflow: ellipsis
+                max-height: 150px
+              &__spec
+                &-list
+      &-info
+        padding: 20px
+        padding-left: 30px
 @media screen and ( max-width: 992px )
   .container
     max-width: 730px
@@ -68,7 +91,14 @@
         margin-bottom: 0
       &:nth-child(even)
         margin-right: 0
-
+  .packages
+    &__title
+      margin-bottom: 45px
+    &-wrapper
+      grid-template-columns: repeat(2, 1fr)
+    &-card
+      width: 100%
+      height: 460px
 @media screen and ( max-width: 768px )
   .container
     max-width: 580px
@@ -115,6 +145,28 @@
   .activities
     &-card
       width: 240px
+  .packages
+    &__title
+      margin-bottom: 30px
+    &-wrapper
+    &-card
+      height: 280px
+      &-info
+        &__spec
+          &-list
+            display: none
+        &__footer
+          align-items: center
+        &-price
+          margin-right: 15px
+          flex-shrink: 0
+          &__old
+            font-size: 12px
+            margin-bottom: 0
+          &__current
+            font-size: 18px
+        &__button
+          line-height: 1
 @media screen and ( max-width: 576px )
   .container
     max-width: 480px
@@ -235,6 +287,34 @@
         margin-bottom: 20px
       &:last-child
         margin-bottom: 0
+  .packages
+    &-wrapper
+      grid-template-columns: 1fr
+      grid-template-rows: repeat(5, 1fr)
+      grid-column-gap: 0
+    &-card
+      height: 270px
+      grid-column-start: 1
+      &--wide
+        .packages
+          &-card
+            &__image
+            &-info
+              &__stars
+              &__title
+                margin-bottom: 16px
+                overflow: visible
+                text-overflow: clip
+                white-space: normal
+              &__desc
+                margin-bottom: 16px
+              &__spec
+                &-list
+              &__footer
+                flex-direction: column
+                align-items: flex-start
+              &-price
+                margin-bottom: 20px
 
 @media screen and ( max-width: 480px )
   .container
