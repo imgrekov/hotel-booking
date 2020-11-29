@@ -13,19 +13,6 @@
       height: 460px
       &--wide
         width: 630px
-        .packages
-          &-card
-            &__image
-            &-info
-              &__stars
-              &__title
-              &__desc
-                white-space: nowrap
-                overflow: hidden
-                text-overflow: ellipsis
-                max-height: 150px
-              &__spec
-                &-list
       &-info
         padding: 20px
         padding-left: 30px
@@ -150,15 +137,19 @@
       margin-bottom: 30px
     &-wrapper
     &-card
-      height: 280px
+      height: 400px
       &-info
+        padding: 14px 20px
+        &__title
+          margin-bottom: 20px
+          font-size: 16px
+          line-height: 1
         &__spec
           &-list
-            display: none
+            margin-bottom: 20px
         &__footer
           align-items: center
         &-price
-          margin-right: 15px
           flex-shrink: 0
           &__old
             font-size: 12px
@@ -167,6 +158,43 @@
             font-size: 18px
         &__button
           line-height: 1
+      &--wide
+        flex-direction: column
+        align-items: flex-start
+        .packages
+          &-card
+            &__image
+              width: 100%
+              height: 50%
+            &__offer
+              font-size: 8px
+              line-height: 10px
+              padding: 5px 10px
+            &-info
+              display: flex
+              align-items: center
+              justify-content: space-between
+              width: 100%
+              padding: 15px
+              &__title
+                margin-bottom: 20px
+              &__desc
+                margin-bottom: 20px
+                max-width: 230px
+                font-size: 12px
+                line-height: 1.2
+              &__spec
+                &-list
+                  margin-bottom: 20px
+                  flex-basis: 100%
+              &__footer
+                flex-wrap: wrap
+                flex-basis: 45%
+              &__button
+              &__price
+              &-price
+                &__old
+                &__currently
 @media screen and ( max-width: 576px )
   .container
     max-width: 480px
@@ -293,32 +321,76 @@
       grid-template-rows: repeat(5, 1fr)
       grid-column-gap: 0
     &-card
-      height: 270px
+      height: 280px
       grid-column-start: 1
+      &__image
+        height: 48%
+      &-info
+        padding: 15px
+        &__wrapper
+          display: flex
+          align-items: flex-start
+          justify-content: space-between
+        &__footer
+        &__button
+          flex-basis: 100%
+        &__price
+          margin-bottom: 10px
+        &-price
+          &__old
+            margin-right: 5px
+            line-height: 1
+          &__current
+            display: inline-block
+            line-height: 1
+        &__spec
+          &-list
+            flex-basis: 65%
+            margin-right: 10px
+            margin-bottom: 0
       &--wide
         .packages
           &-card
             &__image
+              height: 48%
             &-info
-              &__stars
+              display: block
               &__title
-                margin-bottom: 16px
+                margin-bottom: 20px
                 overflow: visible
                 text-overflow: clip
                 white-space: normal
               &__desc
-                margin-bottom: 16px
+                display: none
+                margin-bottom: 0
               &__spec
                 &-list
+                  margin-bottom: 0
+                  flex-basis: 50%
               &__footer
-                flex-direction: column
-                align-items: flex-start
-              &-price
-                margin-bottom: 20px
+                flex-direction: row
+                align-items: center
+                justify-content: space-between
+              &__button
+                flex-basis: 100%
+              &__price
+                margin-bottom: 10px
 
 @media screen and ( max-width: 480px )
   .container
     max-width: 92%
     padding: 0
+  .packages
+    &-card
+      // height: 285px
+      &__image
+        height: 45%
+      &-info
+        padding: 13px
+      &--wide
+        .packages
+          &-card
+            &__image
+              height: 45%
 
 // @media screen and ( min-width: 320px ) and ( max-width: 480px )

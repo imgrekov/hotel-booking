@@ -13,6 +13,7 @@
     grid-template-rows: repeat(2, 1fr)
     grid-gap: 30px
   &-card
+    position: relative
     display: flex
     flex-direction: column
     width: 350px
@@ -31,8 +32,12 @@
           &__image
             width: 50%
             height: auto
+          &__offer
+            font-size: 12px
+            line-height: 15px
+            padding: 8px 12px
           &-info
-            padding: 10px 21px 10px 43px
+            padding: 10px 20px 10px 40px
             width: 50%
             &__stars
               margin-bottom: 5px
@@ -46,6 +51,17 @@
     &__image
       height: 50%
       flex-shrink: 0
+    &__offer
+      position: absolute
+      top: 20px
+      left: 0
+      display: inline-block
+      background-color: $accent
+      color: $true-white
+      font-size: 8px
+      line-height: 10px
+      border-radius: 0 4px 4px 0
+      padding: 5px 10px
     &-info
       padding: 30px 20px 30px 32px
       &__title
@@ -68,14 +84,16 @@
           margin-bottom: 0
         &-list
           margin-bottom: 24px
+          flex-basis: 100%
+      &__footer
+        flex-wrap: wrap
       &__footer
         display: flex
         align-items: flex-end
         justify-content: space-between
       &-price
-        margin-right: 10px
         &__old
-          display: block
+          display: inline-block
           margin-bottom: 5px
           font-size: 14px
           line-height: 18px
