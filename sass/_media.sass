@@ -180,7 +180,7 @@
                 margin-bottom: 20px
               &__desc
                 margin-bottom: 20px
-                max-width: 230px
+                max-width: 260px
                 font-size: 12px
                 line-height: 1.2
               &__spec
@@ -345,7 +345,7 @@
             line-height: 1
         &__spec
           &-list
-            flex-basis: 65%
+            flex-basis: 70%
             margin-right: 10px
             margin-bottom: 0
       &--wide
@@ -355,6 +355,8 @@
               height: 48%
             &-info
               display: block
+              &__stars
+                display: none
               &__title
                 margin-bottom: 20px
                 overflow: visible
@@ -382,15 +384,25 @@
     padding: 0
   .packages
     &-card
-      // height: 285px
+      height: 380px
       &__image
-        height: 45%
+        height: 40%
       &-info
-        padding: 13px
+        padding: 20px 30px
+        &__wrapper
+          display: block
+        &__spec
+          &-list
+            margin-bottom: 20px
       &--wide
         .packages
           &-card
             &__image
-              height: 45%
+              height: 40%
+            &-info
+              padding: 20px 30px
+              &__spec
+                &-list
+                  margin-bottom: 20px
 
 // @media screen and ( min-width: 320px ) and ( max-width: 480px )
