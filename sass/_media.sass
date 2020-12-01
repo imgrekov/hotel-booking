@@ -230,15 +230,60 @@
       &__input
         flex-basis: 100%
 @media screen and ( max-width: 576px )
-  .header-nav, .header__user, .header__search
-    display: none
-  .logo
-    width: 100px
+  $headerHeight: 60px
+  .main
+    margin-top: $headerHeight
   .header
+    position: fixed
+    top: 0
+    right: 0
+    left: 0
+    height: $headerHeight
+    z-index: 99
     &-top
       padding: 20px 0
       &__burger
         display: block
+    &__search,
+    &__user,
+    &__nav
+      &--mobile
+        &-hidden
+          display: none
+    &__nav
+      position: fixed
+      top: $headerHeight
+      right: 0
+      bottom: 0
+      left: 0
+      z-index: 99
+      &--active
+        display: block
+    &__user
+      &--mobile
+        flex-direction: column
+  .user
+    &__name
+      &--mobile
+        margin-left: 0
+        margin-top: 10px
+        color: $true-white
+  .search
+    &__input
+      &--mobile-wide
+        width: 245px
+  .nav
+    &__list
+      flex-direction: column
+    &__item
+      &--mobile
+        &-visible
+          display: flex
+      &:not(:last-child)
+        margin-bottom: 20px
+
+  .logo
+    width: 100px
   .burger
     display: flex
     width: 16px
@@ -255,6 +300,7 @@
       height: 1px
       background-color: $black
   .hotel
+    padding-top: 5px
     &-rate
       display: none
     &-info

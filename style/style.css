@@ -1105,6 +1105,14 @@ p {
   background-color: #c71134;
 }
 
+.overflow--auto {
+  overflow: auto;
+}
+
+.overflow--hidden {
+  overflow: hidden;
+}
+
 .header {
   background-color: #fff;
 }
@@ -1131,7 +1139,7 @@ p {
   display: none;
 }
 
-.header-nav {
+.header__nav {
   background-color: #0A223D;
 }
 
@@ -1257,6 +1265,14 @@ p {
 
 .nav__item {
   color: #fff;
+}
+
+.nav__item--mobile-visible {
+  display: none;
+}
+
+.nav__item--mobile-hidden {
+  display: inherit;
 }
 
 .nav__item:hover {
@@ -2713,17 +2729,67 @@ p {
 }
 
 @media screen and (max-width: 576px) {
-  .header-nav, .header__user, .header__search {
-    display: none;
+  .main {
+    margin-top: 60px;
   }
-  .logo {
-    width: 100px;
+  .header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 60px;
+    z-index: 99;
   }
   .header-top {
     padding: 20px 0;
   }
   .header-top__burger {
     display: block;
+  }
+  .header__search--mobile-hidden, .header__user--mobile-hidden, .header__nav--mobile-hidden {
+    display: none;
+  }
+  .header__nav {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+  }
+  .header__nav--active {
+    display: block;
+  }
+  .header__user--mobile {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .user__name--mobile {
+    margin-left: 0;
+    margin-top: 10px;
+    color: #fff;
+  }
+  .search__input--mobile-wide {
+    width: 245px;
+  }
+  .nav__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .nav__item--mobile-visible {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .logo {
+    width: 100px;
   }
   .burger {
     display: -webkit-box;
@@ -2750,6 +2816,9 @@ p {
     width: 16px;
     height: 1px;
     background-color: #333333;
+  }
+  .hotel {
+    padding-top: 5px;
   }
   .hotel-rate {
     display: none;

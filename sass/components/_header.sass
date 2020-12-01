@@ -13,7 +13,7 @@
     justify-content: space-between
     &__burger
       display: none
-  &-nav
+  &__nav
     background-color: $bg-dark
 
 .logo
@@ -81,6 +81,11 @@
     list-style: none
   &__item
     color: $true-white
+    &--mobile
+      &-visible
+        display: none
+      &-hidden
+        display: inherit
     &:hover
       +trs(color)
       color: $accent

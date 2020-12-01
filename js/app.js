@@ -11,9 +11,7 @@ const hotelSlider = new Swiper('.hotel-slider', {
     prevEl: '.hotel-slider__nav--prev',
   },
 
-  // Disable preloading of all images
   preloadImages: false,
-  // Enable lazy loading
   lazy: true,
 })
 
@@ -50,3 +48,9 @@ function init() {
   })
   hotelMap.setType('yandex#hybrid')
 }
+
+const burgerBtn = document.querySelector('.burger')
+burgerBtn.addEventListener('click', () => {
+  document.querySelector('.header__nav').classList.toggle('header__nav--active')
+  document.querySelector('body').classList.toggle('overflow--hidden')
+})

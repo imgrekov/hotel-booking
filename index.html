@@ -17,11 +17,11 @@
     <header class="header">
       <div class="container">
         <div class="header-top">
-          <a href="#!" class="header__logo logo">
+          <a href="#!" class="logo header__logo">
             <img class="logo__image" src="./images/logo-horizontal.svg" alt="Logo: Best Tour Plan" />
           </a>
           <!-- /.header__logo logo -->
-          <form class="header__search search" action="#">
+          <form class="search header__search header__search--mobile-hidden" action="#">
             <input type="text" class="search__input" placeholder="Search Location" />
             <!-- /.search__label -->
             <button class="button search__button">
@@ -30,13 +30,13 @@
             <!-- /.button search__button -->
           </form>
           <!-- /.header__search search -->
-          <a href="#!" class="header__user user">
+          <a href="#!" class="user header__user header__user--mobile-hidden">
             <img src="./images/user-avatar.jpg" alt="Photo: user" class="user__avatar" />
             <h3 class="user__name">Nathan</h3>
             <!-- /.user__name -->
           </a>
           <!-- /.header__user user -->
-          <button class="header-top__burger burger">
+          <button class="burger header-top__burger">
             <span class="burger__line"></span>
             <span class="burger__line"></span>
             <span class="burger__line"></span>
@@ -46,9 +46,30 @@
         <!-- /.header-top -->
       </div>
       <!-- /.container -->
-      <nav class="header-nav nav">
+      <nav class="nav header__nav header__nav--mobile-hidden">
         <div class="container">
           <ul class="nav__list">
+            <li class="nav__item nav__item--mobile-visible">
+              <a href="#!" class="user header__user header__user--mobile">
+                <img src="./images/user-avatar.jpg" alt="Photo: user" class="user__avatar" />
+                <h3 class="user__name user__name--mobile">Nathan</h3>
+                <!-- /.user__name -->
+              </a>
+              <!-- /.header__user user -->
+            </li>
+            <!-- /.nav__item nav__item--mobile-visible -->
+            <li class="nav__item nav__item--mobile-visible">
+              <form class="search header__search" action="#">
+                <input type="text" class="search__input search__input--mobile-wide" placeholder="Search Location" />
+                <!-- /.search__label -->
+                <button class="button search__button">
+                  <img src="./images/search.svg" alt="Icon: search" />
+                </button>
+                <!-- /.button search__button -->
+              </form>
+              <!-- /.header__search search -->
+            </li>
+            <!-- /.nav__item nav__item--mobile-visible -->
             <li class="nav__item">
               <a href="#!" class="nav__link">All Deals</a>
               <!-- /.nav__link -->
