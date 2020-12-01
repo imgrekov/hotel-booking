@@ -2,4 +2,123 @@
   padding: 108px 0 46px 0
   background-color: $bg-dark
   color: $true-white
+  font-size: 12px
   &-wrapper
+    display: grid
+    grid-template-columns: repeat(4, minmax(min-content, 1fr))
+    grid-auto-rows: minmax(40px, min-content)
+    grid-gap: 24px 20px
+    margin-bottom: 95px
+  &__block
+  &__logo
+    margin-top: 31px
+    grid-row: 1 / 4
+  &__categories
+    grid-row: 1 / 4
+  &__socials
+    grid-row: span 2
+    grid-column: span 2
+  &__contacts
+    grid-column: span 2
+  &__form
+    grid-column: span 2
+  &__title
+    margin-bottom: 16px
+    font-size: 18px
+    line-height: 23px
+    text-transform: uppercase
+    color: $true-white
+    &--mb
+      margin-bottom: 30px
+  &__sub-title
+    margin-bottom: 22px
+  &__sub-title,
+  &__list
+    font-size: 14px
+    line-height: 18px
+    color: $secondary
+  &__item:not(:last-child)
+    margin-bottom: 8px
+  &__item-contacts:not(:last-child)
+    margin-bottom: 20px !important
+  &__link
+    display: block
+    +trs(color)
+    +link-reset
+    &:hover
+      color: $accent
+    &-contacts
+      svg
+        margin-right: 20px
+    &--svg
+      svg
+        width: 20px
+        height: 20px
+        fill: $secondary
+        +trs(fill)
+      &:hover
+        svg
+          fill: $accent
+    &--flex
+      display: flex
+      align-items: flex-start
+  &__socials
+    display: flex
+    align-items: flex-start
+    .footer__title
+      margin: 0 43px 0 0
+  &-form
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    justify-content: space-between
+    &__input,
+    &__textarea
+      height: 50px
+      padding: 23px
+      border: none
+      border-radius: 4px
+      line-height: 15px
+      color: $black
+      background-color: $true-white
+      &:placeholder
+        color: $secondary
+    &__input
+      flex-basis: 48.65%
+      // margin-right: 30px
+      margin-bottom: 15px
+      &--mr-0
+        margin-right: 0
+    &__textarea
+      margin-bottom: 25px
+      height: 120px
+      flex-basis: 100%
+      resize: none
+    &__button
+      padding: 18px 66px
+      line-height: 15px
+    &__text
+      margin-right: 4px
+      line-height: 15px
+  &-bottom
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &-pay-type
+    max-width: 136px
+    &__image
+  &-links
+    display: flex
+    align-items: center
+    list-style: none
+    color: $true-white
+    &__item:not(:last-child)
+      margin-right: 12px
+    &__link
+      +trs(color)
+      +link-reset
+      &:hover
+        color: $accent
+  &__links
+    margin-left: auto
+    margin-right: auto
