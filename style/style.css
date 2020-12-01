@@ -1654,12 +1654,30 @@ p {
   font-weight: 600;
   font-size: 18px;
   line-height: 25px;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
   color: inherit;
   text-decoration: none;
 }
 
 .options-booking__tel span {
   margin-left: 8px;
+}
+
+.options-booking__tel svg {
+  width: 14px;
+  height: 14px;
+  fill: #fff;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+
+.options-booking__tel:hover {
+  color: #ec1f46;
+}
+
+.options-booking__tel:hover svg {
+  fill: #ec1f46;
 }
 
 .options-footer__button {
@@ -2785,13 +2803,19 @@ p {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .nav__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
   .nav__item--mobile-visible {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .nav__item:not(:last-child) {
-    margin-bottom: 20px;
+  .nav__item--mobile-mb-3 {
+    margin-bottom: 30px !important;
+  }
+  .nav__item--mobile-mb-4 {
+    margin-bottom: 40px !important;
   }
   .logo {
     width: 100px;
