@@ -54,6 +54,7 @@
       svg
         width: 20px
         height: 20px
+        flex-shrink: 0
         fill: $secondary
         +trs(fill)
       &:hover
@@ -85,7 +86,6 @@
         color: $secondary
     &__input
       flex-basis: 48.65%
-      // margin-right: 30px
       margin-bottom: 15px
       &--mr-0
         margin-right: 0
@@ -115,6 +115,8 @@
     &__item:not(:last-child)
       margin-right: 12px
     &__link
+      font-size: 12px
+      line-height: 15px
       +trs(color)
       +link-reset
       &:hover
