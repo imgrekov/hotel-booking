@@ -2763,6 +2763,7 @@ p {
   }
   .header__nav--active {
     display: block;
+    overflow: auto;
   }
   .header__user--mobile {
     -webkit-box-orient: vertical;
