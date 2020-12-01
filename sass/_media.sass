@@ -253,12 +253,13 @@
     &__nav
       position: fixed
       top: $headerHeight
-      right: 0
+      right: -200vw
       bottom: 0
-      left: 0
+      width: 100%
       z-index: 99
+      transition: 0.3s ease
       &--active
-        display: block
+        right: 0
         overflow: auto
     &__user
       &--mobile

@@ -2774,13 +2774,15 @@ p {
   .header__nav {
     position: fixed;
     top: 60px;
-    right: 0;
+    right: -200vw;
     bottom: 0;
-    left: 0;
+    width: 100%;
     z-index: 99;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
   }
   .header__nav--active {
-    display: block;
+    right: 0;
     overflow: auto;
   }
   .header__user--mobile {
