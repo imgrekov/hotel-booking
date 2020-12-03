@@ -143,7 +143,7 @@
                 $type = $_GET['t'];
                 $heading = "Thanks for subscribing";
 
-                if ($type == "callback") {
+                if ($type == "msg") {
                   $heading = "Application sent";
                 }
 
@@ -157,7 +157,7 @@
               <?php
               $type = $_GET['t'];
 
-              if ($type == "callback") {
+              if ($type == "msg") {
                 $text = "Manager will contact you in 20 minutes";
                 echo $text;
               }

@@ -73,7 +73,7 @@ try {
   $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
 }
 
-$type = $sub_mail ? 'sub' : 'callback';
+$type = $sub_mail ? 'sub' : 'msg';
 
 // Отображение результата
 header('Location: thanks.php?t=' . $type);
