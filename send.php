@@ -40,19 +40,19 @@ try {
   $mail->isSMTP();
   $mail->CharSet = "UTF-8";
   $mail->SMTPAuth   = true;
-  // $mail->SMTPDebug = 2;
+  $mail->SMTPDebug = 2;
   $mail->Debugoutput = function ($str, $level) {
     $GLOBALS['status'][] = $str;
   };
 
   // Настройки вашей почты
-  $mail->Host       = 'smtp.yandex.ru'; // SMTP сервера вашей почты
-  $mail->Username   = 'grekon.io@yandex.ru'; // Логин на почте
-  $mail->Password   = 'dragon9fruit'; // Пароль на почте
+  $mail->Host       = 'smtp.mail.ru'; // SMTP сервера вашей почты
+  $mail->Username   = 'best-tour-plan@bk.ru'; // Логин на почте
+  $mail->Password   = 'T2TiPA4siyi2'; // Пароль на почте
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
   // Адрес самой почты и имя отправителя
-  $mail->setFrom('grekon.io@yandex.ru', 'Григорий Греков');
+  $mail->setFrom('best-tour-plan@bk.ru', 'Hotel Booking');
 
   // Получатель письма
   $mail->addAddress('d9fgrek@gmail.com');

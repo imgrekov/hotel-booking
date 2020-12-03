@@ -17,7 +17,7 @@
     <header class="header">
       <div class="container">
         <div class="header-top">
-          <a href="#!" class="logo header__logo">
+          <a href="/" class="logo header__logo">
             <img class="logo__image" src="./images/logo-horizontal.svg" alt="Logo: Best Tour Plan" />
           </a>
           <!-- /.header__logo logo -->
