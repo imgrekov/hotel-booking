@@ -17,7 +17,7 @@
     <header class="header">
       <div class="container">
         <div class="header-top">
-          <a href="/" class="logo header__logo">
+          <a href="https://imgrekov.ru/projects/hotel-booking/" class="logo header__logo">
             <img class="logo__image" src="./images/logo-horizontal.svg" alt="Logo: Best Tour Plan" />
           </a>
           <!-- /.header__logo logo -->
@@ -141,10 +141,10 @@
               <h1 class="hotel-info__name">
                 <?php
                 $type = $_GET['t'];
-                $heading = "Заявка отправлена";
+                $heading = "Thanks for subscribing";
 
-                if ($type == "sub") {
-                  $heading = "Спасибо за подписку";
+                if ($type == "callback") {
+                  $heading = "Application sent";
                 }
 
                 echo $heading;
@@ -156,16 +156,16 @@
             <div class="hotel-info__descr">
               <?php
               $type = $_GET['t'];
-              $text = "Спасибо за подписку";
 
               if ($type == "callback") {
-                $text = "Менеджер свяжется с вами через 20 минут";
+                $text = "Manager will contact you in 20 minutes";
                 echo $text;
               }
 
               ?>
             </div>
             <!-- /.hotel-info__descr -->
+            <a href="https://imgrekov.ru/projects/hotel-booking/" class="button button-thx">Back home</a> <!-- /.button -->
           </div>
           <!-- /.hotel-info -->
         </div>
