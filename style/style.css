@@ -2476,13 +2476,15 @@ p {
 .modal__overlay, .modal-dialog {
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .modal__overlay--active, .modal-dialog--active {
   opacity: 1;
   visibility: visible;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .modal__overlay {

@@ -64,6 +64,10 @@ window.addEventListener('DOMContentLoaded', event => {
   document.querySelector('.modal-dialog__close').addEventListener('click', modalClose)
   document.querySelector('.modal__overlay').addEventListener('click', modalClose)
 
+  document.addEventListener('keyup', e => {
+    if (e.code === 'Escape') modalClose()
+  })
+
   function modalOpen() {
     document.querySelector('.modal__overlay').classList.add('modal__overlay--active')
     document.querySelector('.modal-dialog').classList.add('modal-dialog--active')
