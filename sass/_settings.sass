@@ -54,3 +54,35 @@ p
     overflow: auto
   &--hidden
     overflow: hidden
+
+.close
+  padding: 0
+  border: none
+  background-color: transparent
+  color: $true-white
+  cursor: pointer
+  svg
+    width: 20px
+    height: 17px
+    fill: $true-white
+    +trs(fill)
+  &:hover
+    svg
+      fill: $accent
+
+.input,
+.textarea
+  height: 50px
+  padding: 23px
+  border: none
+  border-radius: 4px
+  line-height: 15px
+  color: $black
+  background-color: $true-white
+  &:placeholder
+    color: $secondary
+
+.label
+  color: $true-white
+  font-size: 12px
+  line-height: 15px

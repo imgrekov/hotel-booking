@@ -102,8 +102,10 @@
       align-self: center
     &__categories
       grid-row: 2 / 3
-    &__contacts
-    &__form
+  .modal
+    &-dialog
+      padding: 20px 45px
+
 @media screen and ( max-width: 768px )
   .container
     width: 95%
@@ -213,11 +215,6 @@
               &__footer
                 flex-wrap: wrap
                 flex-basis: 45%
-              &__button
-              &__price
-              &-price
-                &__old
-                &__currently
   .footer
     padding: 70px 20px 20px
     &__contscts,
@@ -228,6 +225,13 @@
       height: 120px
     &-form
       &__input
+        flex-basis: 100%
+  .modal
+    &-form
+      &__button
+        order: 2
+      &__label
+        margin-bottom: 15px
         flex-basis: 100%
 @media screen and ( max-width: 576px )
   $headerHeight: 60px
