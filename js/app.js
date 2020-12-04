@@ -71,9 +71,11 @@ window.addEventListener('DOMContentLoaded', event => {
   function modalOpen() {
     document.querySelector('.modal__overlay').classList.add('modal__overlay--active')
     document.querySelector('.modal-dialog').classList.add('modal-dialog--active')
+    document.querySelector('body').classList.add('overflow--hidden')
   }
   function modalClose() {
     document.querySelector('.modal__overlay').classList.remove('modal__overlay--active')
     document.querySelector('.modal-dialog').classList.remove('modal-dialog--active')
+    document.querySelector('body').classList.remove('overflow--hidden')
   }
 })

@@ -227,6 +227,9 @@
       &__input
         flex-basis: 100%
   .modal
+    &-dialog
+      width: 90%
+
     &-form
       &__button
         order: 2
@@ -515,6 +518,9 @@
       margin-right: 0
       margin-left: 0
       margin-bottom: 10px
+  // .modal
+  //   &-dialog
+  //     max-width: 90%
 @media screen and ( max-width: 480px )
   .container
     padding: 0
@@ -540,5 +546,16 @@
               &__spec
                 &-list
                   margin-bottom: 20px
+  .modal
+    &-dialog
+      width: 95%
 
 // @media screen and ( min-width: 320px ) and ( max-width: 480px )
+
+@media screen and ( max-height: 500px )
+  .modal
+    &-dialog
+      height: 97vh
+      overflow-y: auto
+    &-form
+      margin-bottom: 20px
