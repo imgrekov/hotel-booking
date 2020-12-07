@@ -4,14 +4,11 @@ require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
-// Переменные, которые отправляет пользователь
 $name     = (isset($_POST['name'])) ? $_POST['name'] : '';
 $phone    = (isset($_POST['phone'])) ? $_POST['phone'] : '';
 $email    = (isset($_POST['email'])) ? $_POST['email'] : '';
 $message  = ($_POST['message']) ? $_POST['message'] : 'Пользователь оставил поле пустым…';
 $sub_mail = (isset($_POST['sub_mail'])) ? $_POST['sub_mail'] : '';
-
-var_dump($name, $phone, $email, $message, $sub_mail);
 
 $title = "Новое сообщение с сайта Best Tour Plan";
 $body = "
@@ -40,28 +37,25 @@ if ($sub_mail) {
   ";
 }
 
-echo $title;
-echo $body;
-
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 try {
   $mail->isSMTP();
   $mail->CharSet = "UTF-8";
   $mail->SMTPAuth   = true;
-  $mail->SMTPDebug = 2;
+  // $mail->SMTPDebug = 2;
   $mail->Debugoutput = function ($str, $level) {
     $GLOBALS['status'][] = $str;
   };
 
   // Настройки вашей почты
-  $mail->Host       = 'smtp.mail.ru'; // SMTP сервера вашей почты
-  $mail->Username   = 'best-tour-plan@bk.ru'; // Логин на почте
+  $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
+  $mail->Username   = 'tourplan59@gmail.com'; // Логин на почте
   $mail->Password   = 'T2TiPA4siyi2'; // Пароль на почте
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
   // Адрес самой почты и имя отправителя
-  $mail->setFrom('best-tour-plan@bk.ru', 'Hotel Booking');
+  $mail->setFrom('tourplan59@gmail.com', 'Hotel Booking');
 
   // Получатель письма
   $mail->addAddress('d9fgrek@gmail.com');
@@ -72,18 +66,13 @@ try {
   $mail->Body = $body;
 
   // Проверяем отравленность сообщения
-  if ($mail->send()) {
-    $result = "success";
-  } else {
-    $result = "error";
-  }
+  $result = ($mail->send()) ? 'success' : 'error';
 } catch (Exception $e) {
   $result = "error";
   $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
 }
 
 $type = $sub_mail ? 'sub' : 'msg';
-// $type = $sub_mail ? 'sub' : ($email ? 'modal' : 'msg');
 
 // Отображение результата
 header('Location: thanks.php?t=' . $type);
