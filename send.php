@@ -5,23 +5,27 @@ require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
 // Переменные, которые отправляет пользователь
-$name_raw = $_POST['name'];
-$name = ($name_raw) ?: '';
-$phone_raw = $_POST['phone'];
-$phone = ($phone_raw) ?: '';
-$message_raw = $_POST['message'];
-$message = ($message_raw) ?: 'Пользователь оставил поле пустым…';
-$sub_mail_raw = $_POST['sub_mail'];
-$sub_mail = ($sub_mail_raw) ?: '';
+$name = $_POST['name'];
+$phone = $_POST['phone'];
+$email = $_POST['email'];
+$message = $_POST['message'] || 'Пользователь оставил поле пустым…';
+$sub_mail = $_POST['sub_mail'];
 
+$title = "Новое сообщение с сайта Best Tour Plan";
+$body = "
+  <h2>Новое письмо</h2>
+  <b>Имя:</b> $name<br>
+  <b>Телефон:</b> $phone<br><br>
+  <b>Сообщение:</b><br>$message
+";
 
-// Формирование самого письма
-if ($name && $phone) {
-  $title = "Новое сообщение с сайта Best Tour Plan";
+if ($email) {
+  $title = "Модальное окно. Новое сообщение с сайта Best Tour Plan";
   $body = "
     <h2>Новое письмо</h2>
     <b>Имя:</b> $name<br>
-    <b>Почта:</b> $phone<br><br>
+    <b>Телефон:</b> $phone<br>
+    <b>Почта:</> $email<br><br>
     <b>Сообщение:</b><br>$message
   ";
 }
@@ -74,6 +78,7 @@ try {
 }
 
 $type = $sub_mail ? 'sub' : 'msg';
+// $type = $sub_mail ? 'sub' : ($email ? 'modal' : 'msg');
 
 // Отображение результата
 header('Location: thanks.php?t=' . $type);

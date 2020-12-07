@@ -1166,6 +1166,16 @@ p {
   line-height: 15px;
 }
 
+.error {
+  margin-bottom: 5px;
+  border: 1px solid #ec1f46;
+  color: #ec1f46;
+}
+
+.error-message {
+  color: #ef4061;
+}
+
 .header {
   background-color: #fff;
 }
@@ -2028,6 +2038,13 @@ p {
   line-height: 15px;
 }
 
+#bouncer-error_sub_mail {
+  position: absolute;
+  left: 10px;
+  bottom: 2px;
+  font-size: 12px;
+}
+
 .reviews {
   position: relative;
   padding-top: 40px;
@@ -2396,10 +2413,14 @@ p {
           justify-content: space-between;
 }
 
-.footer-form__input {
+.footer-form__group {
   -ms-flex-preferred-size: 48.65%;
       flex-basis: 48.65%;
   margin-bottom: 15px;
+}
+
+.footer-form__input {
+  width: 100%;
 }
 
 .footer-form__textarea {
@@ -2547,18 +2568,19 @@ p {
 .modal-form__input {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .modal-form__textarea {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  margin-bottom: 15px;
+  margin-top: 15px;
   min-height: 123px;
   resize: none;
 }
 
 .modal-form__button {
+  margin-top: 15px;
   padding: 18px 66px;
   font-weight: 700;
   line-height: 15px;
@@ -2878,7 +2900,7 @@ p {
     width: 104px;
     height: 120px;
   }
-  .footer-form__input {
+  .footer-form__group {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }

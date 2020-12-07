@@ -78,4 +78,8 @@ window.addEventListener('DOMContentLoaded', event => {
     document.querySelector('.modal-dialog').classList.remove('modal-dialog--active')
     document.querySelector('body').classList.remove('overflow--hidden')
   }
+
+  new Bouncer('form')
+
+  document.querySelectorAll('input[type=tel]').forEach(input => new IMask(input, { mask: '+{1} (000) 000-00-00' }))
 })
