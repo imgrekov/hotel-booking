@@ -380,11 +380,15 @@
             <h3 class="footer__title footer__title--mb">Send us a message</h3>
             <!-- /.footer__title -->
             <form action="send.php" method="POST" class="footer-form">
-              <input type="text" class="footer-form__input" name="name" placeholder="Your Full Name*" required />
-              <input type="text" class="footer-form__input" name="phone" placeholder="Phone Number*" required />
-              <textarea name="message" id="message" class="footer-form__textarea" placeholder="Message"></textarea>
+              <div class="footer-form__group">
+                <input type="text" class="input footer-form__input" name="name" placeholder="Your Full Name*" required />
+              </div>
+              <div class="footer-form__group">
+                <input type="tel" class="input footer-form__input" name="phone" placeholder="Phone Number*" required pattern="[\+]\d[\ ]\d{3}[\ ]\d{3}[\-]\d{2}[\-]\d{2}" data-bouncer-message="Please use the following format: +1 000 000-00-00" />
+              </div>
+              <textarea name="message" id="message" class="textarea footer-form__textarea" placeholder="Message"></textarea>
               <button type="submit" class="footer-form__button button">Send</button>
-              <strong class="footer-form__text">* Required Fields</strong>
+              <strong class="label footer-form__text">* Required Fields</strong>
             </form>
             <!-- /.footer-form -->
           </div>
@@ -422,8 +426,8 @@
     <!-- /.footer -->
   </div>
   <!-- /.page -->
-  <script src="./js/swiper-bundle.min.js"></script>
-  <script src="./js/motus.web.js"></script>
+  <script src="https://unpkg.com/imask"></script>
+  <script src="./js/bouncer.polyfills.min.js"></script>
   <script src="./js/app.js"></script>
 </body>
 

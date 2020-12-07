@@ -81,5 +81,5 @@ window.addEventListener('DOMContentLoaded', event => {
 
   new Bouncer('form')
 
-  document.querySelectorAll('input[type=tel]').forEach(input => new IMask(input, { mask: '+{1} (000) 000-00-00' }))
+  document.querySelectorAll('input[type=tel]').forEach(input => new IMask(input, { mask: '+{1} 000 000-00-00' }))
 })

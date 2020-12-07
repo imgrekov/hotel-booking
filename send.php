@@ -5,11 +5,13 @@ require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
 // Переменные, которые отправляет пользователь
-$name = $_POST['name'];
-$phone = $_POST['phone'];
-$email = $_POST['email'];
-$message = $_POST['message'] || 'Пользователь оставил поле пустым…';
-$sub_mail = $_POST['sub_mail'];
+$name     = (isset($_POST['name'])) ? $_POST['name'] : '';
+$phone    = (isset($_POST['phone'])) ? $_POST['phone'] : '';
+$email    = (isset($_POST['email'])) ? $_POST['email'] : '';
+$message  = ($_POST['message']) ? $_POST['message'] : 'Пользователь оставил поле пустым…';
+$sub_mail = (isset($_POST['sub_mail'])) ? $_POST['sub_mail'] : '';
+
+var_dump($name, $phone, $email, $message, $sub_mail);
 
 $title = "Новое сообщение с сайта Best Tour Plan";
 $body = "
@@ -37,6 +39,9 @@ if ($sub_mail) {
     <b>mail:</b> $sub_mail<br>
   ";
 }
+
+echo $title;
+echo $body;
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
