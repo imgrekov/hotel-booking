@@ -2367,12 +2367,16 @@ p {
 
 .error {
   margin-bottom: 5px;
-  border: 1px solid #ec1f46;
+  border: 1px solid #ec1f46 !important;
   color: #ec1f46;
 }
 
 .error-message {
   color: #ef4061;
+}
+
+input.error::-webkit-input-placeholder {
+  color: #ec1f46;
 }
 
 .header {
@@ -3205,13 +3209,18 @@ p {
 .subscribe__input {
   width: 100%;
   height: 100%;
-  background-color: #f5fafe;
   padding-left: 10px;
   padding-right: 70px;
-  border: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
   font-weight: 300;
   font-size: 14px;
   line-height: 18px;
+  background-color: #f5fafe;
+}
+
+.subscribe__input:focus {
+  outline: #ec1f46;
 }
 
 .subscribe__button {

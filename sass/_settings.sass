@@ -89,7 +89,10 @@ p
 
 .error
   margin-bottom: 5px
-  border: 1px solid $accent
+  border: 1px solid $accent !important
   color: $accent
   &-message
     color: lighten($accent, 7%)
+
+input.error::-webkit-input-placeholder
+  color: $accent
