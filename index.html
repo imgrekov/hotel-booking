@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Best Tour Plan — Hotel Booking</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=cea83dff-e384-4956-a843-e916fbcf61a9&lang=ru_RU"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&family=Nunito:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/style.min.css" />
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=cea83dff-e384-4956-a843-e916fbcf61a9&lang=ru_RU"
+      async
+      defer
+    ></script>
   </head>
   <body>
     <div class="page">
@@ -58,7 +62,7 @@
                 </a>
                 <!-- /.header__user user -->
               </li>
-              <!-- /.nav__item nav__item--mobile-visible -->
+              <!-- /.nav__item -->
               <li class="nav__item nav__item--mobile-visible nav__item--mobile-mb-4">
                 <form class="search header__search" action="#">
                   <input type="text" class="search__input search__input--mobile-wide" placeholder="Search Location" />
@@ -70,7 +74,7 @@
                 </form>
                 <!-- /.header__search search -->
               </li>
-              <!-- /.nav__item nav__item--mobile-visible -->
+              <!-- /.nav__item -->
               <li class="nav__item">
                 <a href="#!" class="nav__link">All Deals</a>
                 <!-- /.nav__link -->
@@ -175,48 +179,43 @@
               <div class="hotel-slider swiper-container hotel__slider">
                 <div class="swiper-wrapper hotel-slider__wrapper">
                   <div class="swiper-slide hotel-slider__slide">
-                    <img
-                      class="swiper-lazy hotel-slider__image"
-                      data-src="./images/hotel-slider/hotel-preview-1.jpg"
-                      alt="First hotel photo"
-                    />
-                    <div class="swiper-lazy-preloader"></div>
+                    <picture class="hotel-slider__image">
+                      <source srcset="./images/hotel-slider/hotel-preview-1.webp" type="image/webp" />
+                      <img src="./images/hotel-slider/hotel-preview-1.jpg" alt="First hotel photo" />
+                    </picture>
+                    <!-- /.hotel-slider__image -->
                   </div>
                   <!-- /.swiper-slide hotel-slider__slide -->
                   <div class="swiper-slide hotel-slider__slide">
-                    <img
-                      class="swiper-lazy hotel-slider__image"
-                      data-src="./images/hotel-slider/hotel-preview-2.jpg"
-                      alt="Second hotel photo"
-                    />
-                    <div class="swiper-lazy-preloader"></div>
+                    <picture class="hotel-slider__image">
+                      <source srcset="./images/hotel-slider/hotel-preview-2.webp" type="image/webp" />
+                      <img src="./images/hotel-slider/hotel-preview-2.jpg" alt="Second hotel photo" />
+                    </picture>
+                    <!-- /.hotel-slider__image -->
                   </div>
                   <!-- /.swiper-slide hotel-slider__slide -->
                   <div class="swiper-slide hotel-slider__slide">
-                    <img
-                      class="swiper-lazy hotel-slider__image"
-                      data-src="./images/hotel-slider/hotel-preview-3.jpg"
-                      alt="Third hotel photo"
-                    />
-                    <div class="swiper-lazy-preloader"></div>
+                    <picture class="hotel-slider__image">
+                      <source srcset="./images/hotel-slider/hotel-preview-3.webp" type="image/webp" />
+                      <img src="./images/hotel-slider/hotel-preview-3.jpg" alt="Third hotel photo" />
+                    </picture>
+                    <!-- /.hotel-slider__image -->
                   </div>
                   <!-- /.swiper-slide hotel-slider__slide -->
                   <div class="swiper-slide hotel-slider__slide">
-                    <img
-                      class="swiper-lazy hotel-slider__image"
-                      data-src="./images/hotel-slider/hotel-preview-4.jpg"
-                      alt="Fourth hotel photo"
-                    />
-                    <div class="swiper-lazy-preloader"></div>
+                    <picture class="hotel-slider__image">
+                      <source srcset="./images/hotel-slider/hotel-preview-4.webp" type="image/webp" />
+                      <img src="./images/hotel-slider/hotel-preview-4.jpg" alt="Fourth hotel photo" />
+                    </picture>
+                    <!-- /.hotel-slider__image -->
                   </div>
                   <!-- /.swiper-slide hotel-slider__slide -->
                   <div class="swiper-slide hotel-slider__slide">
-                    <img
-                      class="swiper-lazy hotel-slider__image"
-                      data-src="./images/hotel-slider/hotel-preview-5.jpg"
-                      alt="Fifth hotel photo"
-                    />
-                    <div class="swiper-lazy-preloader"></div>
+                    <picture class="hotel-slider__image">
+                      <source srcset="./images/hotel-slider/hotel-preview-5.webp" type="image/webp" />
+                      <img src="./images/hotel-slider/hotel-preview-5.jpg" alt="Fifth hotel phot" />
+                    </picture>
+                    <!-- /.hotel-slider__image -->
                   </div>
                   <!-- /.swiper-slide hotel-slider__slide -->
                 </div>
@@ -296,7 +295,7 @@
                   <!-- /.options-footer -->
                 </div>
                 <!-- /.hotel-aside__options options -->
-                <div class="hotel-aside__map map" id="hotel-map"></div>
+                <div class="hotel-aside__map" id="hotel-map"></div>
                 <!-- /.hotel-aside__map map -->
                 <!-- /.hotel-aside -->
               </div>
@@ -311,12 +310,11 @@
             <h2 class="packages__title">Other Packages</h2>
             <!-- /.packages__title -->
             <div class="packages-wrapper">
-              <div class="packages-card packages-card--wide" data-aos="fade-right" data-aos-delay="">
-                <img
-                  src="./images/packages/card-1.jpg"
-                  alt="Other packages first hotel photo"
-                  class="packages-card__image"
-                />
+              <div class="packages-card packages-card--wide" data-aos="fade-right">
+                <picture class="packages-card__image">
+                  <source srcset="./images/packages/card-1.webp" type="image/webp" />
+                  <img src="./images/packages/card-1.jpg" alt="Other packages first hotel photo" />
+                </picture>
                 <div class="packages-card-info">
                   <div class="packages-card-info__hero">
                     <div class="packages-card-info__stars stars">
@@ -373,13 +371,12 @@
                 <span class="packages-card__offer">Flash Offer</span>
                 <!-- /.packages-card__offer -->
               </div>
-              <!-- /.packages-card packages-card--wide -->
+              <!-- /.packages-card -->
               <div class="packages-card" data-aos="fade-left" data-aos-delay="">
-                <img
-                  src="./images/packages/card-2.jpg"
-                  alt="Other packages second hotel photo"
-                  class="packages-card__image"
-                />
+                <picture class="packages-card__image">
+                  <source srcset="./images/packages/card-2.webp" type="image/webp" />
+                  <img src="./images/packages/card-2.jpg" alt="Other packages second hotel photo" />
+                </picture>
                 <div class="packages-card-info">
                   <h3 class="packages-card-info__title">LUX* Belle Mare</h3>
                   <!-- /.packages-card-info__title -->
@@ -423,11 +420,10 @@
               </div>
               <!-- /.packages-card -->
               <div class="packages-card" data-aos="fade-up-right" data-aos-delay="100">
-                <img
-                  src="./images/packages/card-3.jpg"
-                  alt="Other packages third hotel photo"
-                  class="packages-card__image"
-                />
+                <picture class="packages-card__image">
+                  <source srcset="./images/packages/card-3.webp" type="image/webp" />
+                  <img src="./images/packages/card-3.jpg" alt="Other packages third hotel photo" />
+                </picture>
                 <div class="packages-card-info">
                   <h3 class="packages-card-info__title">White Palace</h3>
                   <!-- /.packages-card-info__title -->
@@ -471,11 +467,10 @@
               </div>
               <!-- /.packages-card -->
               <div class="packages-card" data-aos="fade-up" data-aos-delay="200">
-                <img
-                  src="./images/packages/card-4.jpg"
-                  alt="Other packages fourth hotel photo"
-                  class="packages-card__image"
-                />
+                <picture class="packages-card__image">
+                  <source srcset="./images/packages/card-4.webp" type="image/webp" />
+                  <img src="./images/packages/card-4.jpg" alt="Other packages fourth hotel photo" />
+                </picture>
                 <div class="packages-card-info">
                   <h3 class="packages-card-info__title">Luxury Place</h3>
                   <!-- /.packages-card-info__title -->
@@ -519,11 +514,10 @@
               </div>
               <!-- /.packages-card -->
               <div class="packages-card" data-aos="fade-up-left" data-aos-delay="300">
-                <img
-                  src="./images/packages/card-5.jpg"
-                  alt="Other packages fifth hotel photo"
-                  class="packages-card__image"
-                />
+                <picture class="packages-card__image">
+                  <source srcset="./images/packages/card-5.webp" type="image/webp" />
+                  <img src="./images/packages/card-5.jpg" alt="Other packages fifth hotel photo" />
+                </picture>
                 <div class="packages-card-info">
                   <h3 class="packages-card-info__title">Hotel Five Star</h3>
                   <!-- /.packages-card-info__title -->
@@ -667,23 +661,21 @@
                       </div>
                       <!-- /.reviews-slider__profile -->
                       <p class="reviews-slider__text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere enim mollitia a voluptate unde,
-                        esse ipsum ut soluta velit fuga. Dignissimos, eos dolorum? Accusamus neque perferendis ex
-                        necessitatibus incidunt fugiat, repudiandae rerum rem eveniet modi, voluptate, consectetur
-                        tenetur natus provident? Numquam qui est voluptatibus, quos nihil porro labore quia? Voluptas
-                        suscipit libero, ab harum dicta excepturi sint inventore cupiditate nostrum sunt nam eveniet
-                        animi quod voluptates at facere, aspernatur doloribus quo hic eos reiciendis! Accusantium eius
-                        dolorem consequuntur repellendus culpa et tenetur eligendi odit, a numquam necessitatibus
-                        architecto, obcaecati magnam quis repellat dolorum omnis dolore error non! Iure ab adipisci
-                        expedita, quisquam voluptates cupiditate doloremque maxime illo impedit alias veritatis
-                        similique deleniti reprehenderit vitae repudiandae magni quasi? Voluptate atque accusantium
-                        reiciendis incidunt dolor quasi rerum, vel doloremque architecto mollitia molestias natus amet
-                        quia dicta quae quis. Quibusdam non, doloribus adipisci ad natus voluptates architecto nobis
-                        doloremque cum saepe quae earum sit excepturi? Eveniet, maxime nulla recusandae quas repudiandae
-                        molestiae culpa dolorem nobis cum labore odit exercitationem doloremque deserunt officiis
-                        mollitia possimus. Quibusdam aliquam autem, magni consequatur voluptatibus perferendis sed
-                        dolore! Ad consequatur aspernatur deleniti hic magni non amet quasi fugiat qui praesentium
-                        assumenda laborum aperiam facilis deserunt veniam, alias voluptatem quas quibusdam perspiciatis.
+                        Excepturi sint inventore cupiditate nostrum sunt nam eveniet animi quod voluptates at facere,
+                        aspernatur doloribus quo hic eos reiciendis! Accusantium eius dolorem consequuntur repellendus
+                        culpa et tenetur eligendi odit, a numquam necessitatibus architecto, obcaecati magnam quis
+                        repellat dolorum omnis dolore error non! Iure ab adipisci expedita, quisquam voluptates
+                        cupiditate doloremque maxime illo impedit alias veritatis similique deleniti reprehenderit vitae
+                        repudiandae magni quasi? Voluptate atque accusantium reiciendis incidunt dolor quasi rerum, vel
+                        doloremque architecto mollitia molestias natus amet quia dicta quae quis. Quibusdam non,
+                        doloribus adipisci ad natus voluptates architecto nobis doloremque cum saepe quae earum sit
+                        excepturi? Eveniet, maxime nulla voluptates cupiditate doloremque maxime illo impedit alias
+                        veritatis similique deleniti reprehenderit vitae recusandae quas repudiandae molestiae culpa
+                        dolorem nobis cum labore odit exercitationem doloremque deserunt officiis mollitia possimus.
+                        Quibusdam aliquam autem, magni consequatur voluptatibus voluptates cupiditate doloremque maxime
+                        illo impedit alias veritatis similique deleniti reprehenderit vitae perferendis sed dolore! Ad
+                        consequatur aspernatur deleniti hic magni non amet quasi fugiat qui praesentium assumenda
+                        laborum aperiam facilis deserunt veniam, alias voluptatem quas quibusdam perspiciatis.
                       </p>
                       <!-- /.reviews-slider__text -->
                     </div>
@@ -711,11 +703,12 @@
                       </div>
                       <!-- /.reviews-slider__profile -->
                       <p class="reviews-slider__text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea sapiente quam explicabo esse
-                        possimus illo ipsum doloremque sunt quo incidunt earum distinctio tenetur fuga, dolor officia
-                        recusandae! Perspiciatis sint suscipit mollitia tenetur eligendi alias qui asperiores delectus
-                        nisi consectetur. Quas, ab! Esse omnis facere repellendus consequatur dolore eos expedita, optio
-                        nam earum!
+                        Ullam laboriosam ratione nihil! Laudantium ad voluptatibus fuga aperiam esse accusantium facilis
+                        quasi, quidem sit adipisci ipsum explicabo voluptate assumenda qui repellendus. Cupiditate
+                        dolorem iusto natus ipsum enim eum quia quasi ipsam nulla, repellat reiciendis adipisci ipsa
+                        quod hic placeat eveniet facere magni. Cumque magni libero ipsum quaerat porro repellendus,
+                        totam labore laboriosam ratione nihil sit vitae voluptatibus deserunt, unde iusto aut
+                        dignissimos veniam quod.
                       </p>
                       <!-- /.reviews-slider__text -->
                     </div>
@@ -746,12 +739,11 @@
                       </div>
                       <!-- /.reviews-slider__profile -->
                       <p class="reviews-slider__text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ad pariatur quas praesentium
-                        omnis neque perspiciatis at nihil quod similique molestiae illum delectus nemo aliquam quaerat
-                        ea ipsam quisquam amet minus, saepe sapiente impedit rem! Consequatur eius beatae incidunt
-                        facilis sunt? Et cupiditate totam dolorum, asperiores cumque doloremque. Reprehenderit, error
-                        neque labore voluptas quia id facilis! At nobis laborum nemo, ducimus aspernatur repellendus cum
-                        hic!
+                        Minima voluptatibus animi accusamus quod. Qui aliquam perferendis facilis aut voluptatem nisi
+                        quis incidunt ducimus culpa ad iste, quasi esse, itaque rerum autem veritatis? Mollitia
+                        molestiae veritatis libero iusto odio. Odio ipsa in vitae placeat dolor tempora dolorem, nam
+                        sequi quas, cupiditate dolore a cum et tempore nihil. Voluptatibus dolore quos voluptates id
+                        debitis et illo aut iste recusandae quae pariatur porro nihil
                       </p>
                       <!-- /.reviews-slider__text -->
                     </div>
@@ -779,7 +771,7 @@
                         <!-- /.reviews-slider__stars stars -->
                       </div>
                       <!-- /.reviews-slider__profile -->
-                      <p class="reviews-slider__text">Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                      <p class="reviews-slider__text">Ex voluptate molestiae odit ipsa non dolore accusantium.</p>
                       <!-- /.reviews-slider__text -->
                     </div>
                     <!-- /.reviews-slider__item -->
@@ -824,11 +816,11 @@
                 <!-- /.activities-card__title -->
                 <button class="activities-card__button button" data-target="modal">Book Now</button>
                 <!-- /.activities-card__button button -->
-                <img
-                  src="./images/activities/card-1.jpg"
-                  alt="Other activities first image"
-                  class="activities-card__bg"
-                />
+                <picture class="activities-card__image">
+                  <source srcset="./images/activities/card-1.webp" type="image/webp" />
+                  <img src="./images/activities/card-1.jpg" alt="Other activities first image" />
+                </picture>
+                <!-- /.activities-card__image -->
               </div>
               <!-- /.activities-card -->
               <div class="activities-card" data-aos="fade-up" data-aos-delay="100">
@@ -836,11 +828,11 @@
                 <!-- /.activities-card__title -->
                 <button class="activities-card__button button" data-target="modal">Book Now</button>
                 <!-- /.activities-card__button button -->
-                <img
-                  src="./images/activities/card-2.jpg"
-                  alt="Other activities second image"
-                  class="activities-card__bg"
-                />
+                <picture class="activities-card__image">
+                  <source srcset="./images/activities/card-2.webp" type="image/webp" />
+                  <img src="./images/activities/card-2.jpg" alt="Other activities second image" />
+                </picture>
+                <!-- /.activities-card__image -->
               </div>
               <!-- /.activities-card -->
               <div class="activities-card" data-aos="fade-up" data-aos-delay="200">
@@ -848,11 +840,11 @@
                 <!-- /.activities-card__title -->
                 <button class="activities-card__button button" data-target="modal">Book Now</button>
                 <!-- /.activities-card__button button -->
-                <img
-                  src="./images/activities/card-3.jpg"
-                  alt="Other activities third image"
-                  class="activities-card__bg"
-                />
+                <picture class="activities-card__image">
+                  <source srcset="./images/activities/card-3.webp" type="image/webp" />
+                  <img src="./images/activities/card-3.jpg" alt="Other activities third image" />
+                </picture>
+                <!-- /.activities-card__image -->
               </div>
               <!-- /.activities-card -->
               <div class="activities-card" data-aos="fade-up" data-aos-delay="300">
@@ -860,11 +852,11 @@
                 <!-- /.activities-card__title -->
                 <button class="activities-card__button button" data-target="modal">Book Now</button>
                 <!-- /.activities-card__button button -->
-                <img
-                  src="./images/activities/card-4.jpg"
-                  alt="Other activities fourth image"
-                  class="activities-card__bg"
-                />
+                <picture class="activities-card__image">
+                  <source srcset="./images/activities/card-4.webp" type="image/webp" />
+                  <img src="./images/activities/card-4.jpg" alt="Other activities fourth image" />
+                </picture>
+                <!-- /.activities-card__image -->
               </div>
               <!-- /.activities-card -->
             </div>
@@ -1005,7 +997,7 @@
                       />
                     </svg>
                   </a>
-                  <!-- /.footer-links__link footer-links__link--svg -->
+                  <!-- /.footer-links__link -->
                 </li>
                 <!-- /.footer-links__item -->
                 <li class="footer-links__item">
@@ -1016,7 +1008,7 @@
                       />
                     </svg>
                   </a>
-                  <!-- /.footer-links__link footer-links__link--svg -->
+                  <!-- /.footer-links__link -->
                 </li>
                 <!-- /.footer-links__item -->
                 <li class="footer-links__item">
@@ -1027,7 +1019,7 @@
                       />
                     </svg>
                   </a>
-                  <!-- /.footer-links__link footer-links__link--svg -->
+                  <!-- /.footer-links__link -->
                 </li>
                 <!-- /.footer-links__item -->
               </ul>
@@ -1122,7 +1114,7 @@
                 </div>
                 <textarea
                   name="message"
-                  id="message"
+                  id="footer-message"
                   class="textarea footer-form__textarea"
                   placeholder="Message"
                 ></textarea>
@@ -1183,7 +1175,7 @@
             <input type="email" class="input modal-form__input" name="email" placeholder="Email*" required />
             <textarea
               name="message"
-              id="message"
+              id="modal-message"
               class="textarea modal-form__textarea"
               placeholder="Message"
             ></textarea>
@@ -1205,11 +1197,11 @@
       <!-- /.modal -->
     </div>
     <!-- /.page -->
-    <script src="https://unpkg.com/imask"></script>
+    <script src="https://unpkg.com/imask@6.0.5/dist/imask.js"></script>
     <script src="./js/swiper-bundle.min.js"></script>
-    <script src="./js/motus.web.js"></script>
+    <script src="./js/motus.min.js"></script>
     <script src="./js/bouncer.polyfills.min.js"></script>
-    <script src="./js/aos.js"></script>
+    <script src="./js/aos.min.js"></script>
     <script src="./js/app.js"></script>
   </body>
 </html>
