@@ -50,16 +50,21 @@ window.addEventListener('DOMContentLoaded', event => {
   initYandexMap = () => {
     if (isNeedToLoadHotelMap) {
       isNeedToLoadHotelMap = false
-      ymaps.ready(init)
-      function init() {
-        const hotelMap = new ymaps.Map('hotel-map', {
-          center: [-8.825708188621496, 115.21862255745404],
-          zoom: 16,
-        })
-        hotelMap.setType('yandex#hybrid')
-      }
+      hotelMap.insertAdjacentHTML(
+        'beforeend',
+        `
+          <iframe
+            class="hotel-aside__iframe"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4114.0230675412395!2d115.21825967082796!3d-8.825254917815757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x63d7607350cf7576!2sHilton%20Bali%20Resort!5e1!3m2!1sru!2sru!4v1606236250046!5m2!1sru!2sru"
+            allowfullscreen="true"
+            aria-hidden="false"
+            tabindex="0"
+          ></iframe>
+        `,
+      )
     }
   }
+
   hotelMap.addEventListener('click', initYandexMap, { passive: true })
   hotelMap.addEventListener('touchmove', initYandexMap, { passive: true })
   hotelMap.addEventListener('touchstart', initYandexMap, { passive: true })
