@@ -6,10 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Best Tour Plan — Hotel Booking</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=cea83dff-e384-4956-a843-e916fbcf61a9&lang=ru_RU"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./style/style.css" />
+  <link rel="stylesheet" href="./style/style.min.css" />
 </head>
 
 <body>
@@ -424,6 +423,31 @@
       <!-- /.container -->
     </footer>
     <!-- /.footer -->
+    <div class="modal">
+      <div class="modal__overlay"></div>
+      <!-- /.modal__overlay -->
+      <div class="modal-dialog">
+        <h2 class="modal-dialog__title">Booking</h2>
+        <!-- /.modal-dialog__title -->
+        <form action="./send.php" method="POST" class="modal-dialog__form modal-form">
+          <input type="text" class="input modal-form__input" name="name" placeholder="Your Full Name*" required />
+          <input type="tel" class="input modal-form__input" name="phone" placeholder="Phone Number*" required pattern="[\+]\d[\ ]\d{3}[\ ]\d{3}[\-]\d{2}[\-]\d{2}" data-bouncer-message="Please use the following format: +1 000 000-00-00" />
+          <input type="email" class="input modal-form__input" name="email" placeholder="Email*" required />
+          <textarea name="message" id="modal-message" class="textarea modal-form__textarea" placeholder="Message"></textarea>
+          <button type="submit" class="button modal-form__button">Send</button>
+          <strong class="label modal-form__label">* Required Fields</strong>
+        </form>
+        <!-- /.modal-form -->
+        <button class="close modal-dialog__close">
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.414 8l6.243-6.23a1.034 1.034 0 000-1.466 1.04 1.04 0 00-1.468 0l-6.244 6.23L2.702.304a1.04 1.04 0 00-1.469 0 1.034 1.034 0 000 1.466L7.477 8l-6.244 6.23a1.037 1.037 0 101.469 1.466l6.243-6.23 6.244 6.23a1.037 1.037 0 001.468 0 1.034 1.034 0 000-1.466L10.414 8z" />
+          </svg>
+        </button>
+        <!-- /.close modal-form__close -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
   </div>
   <!-- /.page -->
   <script src="https://unpkg.com/imask"></script>
