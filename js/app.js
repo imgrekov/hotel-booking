@@ -60,8 +60,8 @@ window.addEventListener('DOMContentLoaded', event => {
       }
     }
   }
-  hotelMap.addEventListener('click', initYandexMap)
-  hotelMap.addEventListener('touchmove', initYandexMap)
+  hotelMap.addEventListener('click', initYandexMap, { passive: true })
+  hotelMap.addEventListener('touchmove', initYandexMap, { passive: true })
   hotelMap.addEventListener('touchstart', initYandexMap, { passive: true })
   hotelMap.addEventListener('mouseover', initYandexMap, { passive: true })
 
