@@ -447,9 +447,9 @@
     &-card
       grid-column-start: 1
       &__image
-        flex: 0 0 150px
+        flex: 0 0 190px
       &-info
-        padding: 20px 30px
+        padding: 20px 30px 25px
         &__wrapper
           display: flex
           align-items: flex-start
@@ -475,9 +475,10 @@
         .packages
           &-card
             &__image
-              flex: 0 0 150px
+              flex: 0 0 190px
             &-info
               display: block
+              padding: 20px 30px 25px
               &__wrapper
                 min-width: auto
               &__stars
@@ -551,27 +552,34 @@
   .container
     padding: 0
   .packages
+    &-wrapper
+      grid-gap: 20px
     &-card
-      height: 380px
       &__image
-        height: 40%
       &-info
-        padding: 20px 30px
+        &__title
+          margin-bottom: 24px
         &__wrapper
           display: block
         &__spec
+          margin-bottom: 10px
           &-list
-            margin-bottom: 20px
+            margin-bottom: 18px
       &--wide
         .packages
           &-card
             &__image
-              height: 40%
+              // height: 40%
             &-info
-              padding: 20px 30px
+              // padding: 20px 30px
+              &__title
+                margin-bottom: 24px
               &__spec
+                margin-bottom: 10px
+                &:last-child
+                  margin-bottom: 0
                 &-list
-                  margin-bottom: 20px
+                  margin-bottom: 18px
   .modal
     &-dialog
       width: 95%
