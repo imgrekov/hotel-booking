@@ -176,7 +176,10 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-wrapper">
-          <img src="./images/footer/logo-vertical.svg" alt="Logo" class="footer__logo" />
+          <a class="footer__logo" href="https://imgrekov.ru/projects/hotel-booking/">
+            <img src="./images/footer/logo-vertical.svg" alt="Logo" class="footer__img" />
+          </a>
+          <!-- /.footer__logo -->
           <div class="footer__block footer__categories">
             <h3 class="footer__title">All categories</h3>
             <!-- /.footer__title -->

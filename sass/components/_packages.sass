@@ -1,6 +1,6 @@
 
 .packages
-  padding: 40px 0 70px 0
+  padding: 43px 0 70px 0
   &__title
     margin-bottom: 65px
     font-size: 36px
@@ -30,7 +30,7 @@
         height: 100%
     &__offer
       position: absolute
-      top: 20px
+      top: 25px
       left: 0
       display: inline-block
       background-color: $accent
@@ -53,15 +53,21 @@
         font-size: 14px
         line-height: 160%
       &__spec
-        margin-bottom: 11px
+        display: flex
+        align-items: center
         justify-content: flex-start
+        margin-bottom: 11px
         font-size: 12px
         line-height: 15px
         &:last-child
           margin-bottom: 0
+        span
+          margin-left: 16px
         &-list
-          margin-bottom: 24px
+          display: flex
+          flex-direction: column
           flex-basis: 100%
+          margin-bottom: 24px
       &__footer
         flex-wrap: wrap
       &__footer
@@ -88,7 +94,6 @@
     &--wide
       grid-column: span 2
       flex-direction: row
-      align-items: center
       .packages
         &-card
           &__image
@@ -100,15 +105,16 @@
             font-size: 12px
             line-height: 15px
             padding: 8px 12px
+            min-width: 95px
           &-info
-            padding: 46px 21px 30px 43px
+            padding: 46px 21px 30px 45px
             width: 50%
             &__stars
               margin-bottom: 5px
             &__title
               margin-bottom: 27px
             &__desc
-              margin-bottom: 37px
+              margin-bottom: 46px
             &__spec
               &-list
                 margin-bottom: 37px

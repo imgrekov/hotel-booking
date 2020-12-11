@@ -6,7 +6,7 @@
       display: flex
       align-items: center
       justify-content: space-between
-      padding-bottom: 20px
+      margin-bottom: 20px
   &-info
     flex-basis: 85%
     &__wrapper
@@ -25,17 +25,17 @@
       margin-left: 14px
     &__descr
       font-size: 12px
-      line-height: 15px
+      line-height: 14px
   &-rate
     text-align: center
     border-radius: 4px
     background-color: $accent
     color: $true-white
-    padding: 8px
+    padding: 10px 7px
     &__text
       font-size: 8px
       line-height: 10px
-      margin-bottom: 2px
+      margin-bottom: 3px
     &__count
   &-grid
     display: flex
@@ -72,6 +72,7 @@
       z-index: 33
       top: 50%
       transform: translateY(-50%)
+      cursor: pointer
       @media screen and ( min-width: 992px )
         &:hover
           svg
@@ -84,14 +85,13 @@
           fill: rgba(#fff, .8)
           +trs(fill)
       &--prev
-        left: 18px
+        left: 16px
       &--next
-        right: 18px
+        right: 16px
   &-aside
     display: flex
     flex: 0 0 350px
     flex-direction: column
-    // align-items: center
     justify-content: space-between
     &__options
       width: 100%
@@ -137,9 +137,9 @@
     line-height: 1
 
 .options
-  min-width: 350px
+  max-width: 350px
   font-family: 'Nunito', sans-serif
-  padding: 28px
+  padding: 30px 26px
   border-radius: 8px
   background: $bg-dark
   color: $true-white
@@ -153,9 +153,13 @@
       display: flex
       flex-direction: column
       span
-        font-size: 12px
-        line-height: 1
+        font-size: 10px
+        line-height: 14px
+        &:last-of-type
+          font-size: 12px
+          line-height: 15px
       strong
+        font-weight: 800
         font-size: 24px
         line-height: 33px
     &__spec
@@ -172,6 +176,7 @@
       &-list
         display: flex
         flex-direction: column
+        margin-top: -14px
   &-booking
     display: flex
     margin-bottom: 16px
