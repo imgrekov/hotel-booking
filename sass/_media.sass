@@ -9,13 +9,21 @@
   .packages
     &-wrapper
     &-card
-      width: 300px
-      height: 460px
+      &__image
+        flex: 0 0 230px
       &--wide
-        width: 630px
+        .packages
+          &-card
+            &__image
+              max-height: 463px
+            &-info
+              padding: 30px
+              padding-right: 25px
       &-info
-        padding: 20px
-        padding-left: 30px
+        padding: 20px 30px
+        &__desc
+          font-size: 13px
+          line-height: 145%
 @media screen and ( max-width: 992px )
   .container
     max-width: 730px
@@ -71,7 +79,6 @@
       flex-wrap: wrap
     &-card
       width: 340px
-      // flex-shrink: 0
       margin-right: 20px
       margin-bottom: 20px
       &:nth-last-child(-n+2)
@@ -84,8 +91,8 @@
     &-wrapper
       grid-template-columns: repeat(2, 1fr)
     &-card
-      width: 100%
-      height: 460px
+      &-info
+        padding: 20px 30px 30px
   .footer
     &-wrapper
       grid-template-columns: repeat(3, minmax(min-content, 1fr))
@@ -158,9 +165,8 @@
       margin-bottom: 30px
     &-wrapper
     &-card
-      height: 400px
       &-info
-        padding: 14px 20px
+        padding: 25px
         &__title
           margin-bottom: 20px
           font-size: 16px
@@ -190,7 +196,7 @@
           &-card
             &__image
               width: 100%
-              height: 50%
+              max-height: 250px
               img,
               source
                 width: 100%
@@ -203,11 +209,11 @@
               align-items: center
               justify-content: space-between
               width: 100%
-              padding: 30px 20px
+              padding: 20px 30px
               &__wrapper
                 min-width: 35%
               &__hero
-                max-width: 58%
+                flex: 0 1 55%
               &__title
                 margin-bottom: 20px
               &__desc
@@ -216,6 +222,7 @@
                 font-size: 12px
                 line-height: 1.2
               &__spec
+                white-space: nowrap
                 &-list
                   margin-bottom: 20px
                   flex-basis: 100%
@@ -236,12 +243,11 @@
   .modal
     &-dialog
       width: 90%
-
     &-form
       &__button
         order: 2
       &__label
-        margin-bottom: 15px
+        margin: 15px 0 25px
         flex-basis: 100%
 @media screen and ( max-width: 576px )
   $headerHeight: 60px
@@ -308,7 +314,7 @@
     width: 100px
   .burger
     display: flex
-    width: 16px
+    width: 17px
     height: 11px
     padding: 0
     align-items: center
@@ -318,9 +324,20 @@
     border: none
     cursor: pointer
     &__line
-      width: 16px
+      width: 100%
       height: 1px
       background-color: $black
+      transition: 0.2s cubic-bezier(.65,.05,.36,1) 0s
+      @media screen and ( min-width: 992px )
+        &:hover
+          background-color: $accent
+    &--active
+      .burger__line:nth-child(1)
+        transform: translateY(5px) rotate(45deg)
+      .burger__line:nth-child(2)
+        display: none
+      .burger__line:nth-child(3)
+        transform: translateY(-5px) rotate(-45deg)
   .hotel
     padding-top: 5px
     &-rate
@@ -333,13 +350,16 @@
         order: -1
         margin-bottom: 0
         margin-left: 0
-        margin-right: 14px
+        margin-right: 0
       &__stars
         flex-basis: auto
         margin-left: auto
+        margin-bottom: 0
       &__name
         flex-basis: 100%
         margin-top: 10px
+    &__info-wrapper
+      display: block
     &__slider
       margin-bottom: 20px
     &-slider
@@ -425,12 +445,11 @@
       grid-template-rows: repeat(5, 1fr)
       grid-column-gap: 0
     &-card
-      height: 280px
       grid-column-start: 1
       &__image
-        height: 48%
+        flex: 0 0 150px
       &-info
-        padding: 15px
+        padding: 20px 30px
         &__wrapper
           display: flex
           align-items: flex-start
@@ -456,9 +475,11 @@
         .packages
           &-card
             &__image
-              height: 48%
+              flex: 0 0 150px
             &-info
               display: block
+              &__wrapper
+                min-width: auto
               &__stars
                 display: none
               &__title
@@ -472,8 +493,9 @@
               &__spec
                 &-list
                   margin-bottom: 0
-                  flex-basis: 50%
+                  flex-basis: 70%
               &__footer
+                flex-basis: auto
                 flex-direction: row
                 align-items: center
                 justify-content: space-between
@@ -525,9 +547,6 @@
       margin-right: 0
       margin-left: 0
       margin-bottom: 10px
-  // .modal
-  //   &-dialog
-  //     max-width: 90%
 @media screen and ( max-width: 480px )
   .container
     padding: 0

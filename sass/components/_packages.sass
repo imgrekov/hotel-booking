@@ -9,6 +9,7 @@
     text-transform: uppercase
   &-wrapper
     display: grid
+    align-items: start
     grid-template-columns: repeat(3, 1fr)
     grid-template-rows: repeat(2, 1fr)
     grid-gap: 30px
@@ -16,42 +17,12 @@
     position: relative
     display: flex
     flex-direction: column
-    width: 350px
-    height: 500px
     border-radius: 8px
     overflow: hidden
     background-color: $bg-dark
     color: $true-white
-    &--wide
-      flex-direction: row
-      align-items: center
-      width: 730px
-      grid-column: span 2
-      .packages
-        &-card
-          &__image
-            width: 50%
-            height: auto
-            overflow: hidden
-          &__offer
-            font-size: 12px
-            line-height: 15px
-            padding: 8px 12px
-          &-info
-            padding: 10px 20px 10px 40px
-            width: 50%
-            &__stars
-              margin-bottom: 5px
-            &__title
-              margin-bottom: 24px
-            &__desc
-              margin-bottom: 30px
-            &__spec
-              &-list
-                margin-bottom: 30px
     &__image
-      height: 50%
-      flex-shrink: 0
+      flex: 0 0 250px
       overflow: hidden
       img,
       source
@@ -69,7 +40,7 @@
       border-radius: 0 4px 4px 0
       padding: 5px 10px
     &-info
-      padding: 30px 20px 30px 32px
+      padding: 29px 20px 29px 30px
       &__title
         margin-bottom: 23px
         font-size: 18px
@@ -114,3 +85,30 @@
         font-weight: 600
         font-size: 14px
         line-height: 19px
+    &--wide
+      grid-column: span 2
+      flex-direction: row
+      align-items: center
+      .packages
+        &-card
+          &__image
+            width: 50%
+            max-height: 500px
+            overflow: hidden
+            flex: 0 0 auto
+          &__offer
+            font-size: 12px
+            line-height: 15px
+            padding: 8px 12px
+          &-info
+            padding: 46px 21px 30px 43px
+            width: 50%
+            &__stars
+              margin-bottom: 5px
+            &__title
+              margin-bottom: 27px
+            &__desc
+              margin-bottom: 37px
+            &__spec
+              &-list
+                margin-bottom: 37px
