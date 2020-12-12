@@ -27,8 +27,6 @@ window.addEventListener('DOMContentLoaded', event => {
     new Swiper(reviewsSlider, {
       loop: true,
 
-      autoHeight: true,
-
       navigation: {
         nextEl: '.reviews-wrapper__nav--next',
         prevEl: '.reviews-wrapper__nav--prev',
@@ -111,6 +109,9 @@ window.addEventListener('DOMContentLoaded', event => {
   }
 
   new Bouncer('form')
+
+  const footerInput = document.querySelector('.footer-form__input')
+  footerInput.addEventListener('input', () => (footerInput.value = footerInput.value.replace(/[^a-z]\s/i, '')))
 
   document.querySelectorAll('input[type=tel]').forEach(input => new IMask(input, { mask: '+{1} 000 000-00-00' }))
 

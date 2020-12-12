@@ -1104,6 +1104,9 @@
                     class="input footer-form__input"
                     name="name"
                     placeholder="Your Full Name*"
+                    minlength="2"
+                    maxlength="44"
+                    data-bouncer-message="Please enter name"
                     required
                   />
                 </div>
@@ -1168,7 +1171,15 @@
           <h2 class="modal-dialog__title">Booking</h2>
           <!-- /.modal-dialog__title -->
           <form action="./send.php" method="POST" class="modal-dialog__form modal-form">
-            <input type="text" class="input modal-form__input" name="name" placeholder="Your Full Name*" required />
+            <input
+              type="text"
+              class="input modal-form__input"
+              name="name"
+              placeholder="Your Full Name*"
+              minlength="2"
+              maxlength="44"
+              required
+            />
             <input
               type="tel"
               class="input modal-form__input"

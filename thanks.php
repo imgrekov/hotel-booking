@@ -383,7 +383,7 @@
             <!-- /.footer__title -->
             <form action="send.php" method="POST" class="footer-form">
               <div class="footer-form__group">
-                <input type="text" class="input footer-form__input" name="name" placeholder="Your Full Name*" required />
+                <input type="text" class="input footer-form__input" name="name" placeholder="Your Full Name*" minlength="2" maxlength="44" required />
               </div>
               <div class="footer-form__group">
                 <input type="tel" class="input footer-form__input" name="phone" placeholder="Phone Number*" required pattern="[\+]\d[\ ]\d{3}[\ ]\d{3}[\-]\d{2}[\-]\d{2}" data-bouncer-message="Please use the following format: +1 000 000-00-00" />

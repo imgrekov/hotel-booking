@@ -4,11 +4,11 @@ require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
-$name     = (isset($_POST['name'])) ? $_POST['name'] : '';
-$phone    = (isset($_POST['phone'])) ? $_POST['phone'] : '';
-$email    = (isset($_POST['email'])) ? $_POST['email'] : '';
-$message  = ($_POST['message']) ? $_POST['message'] : 'User left blank…';
-$sub_mail = (isset($_POST['sub_mail'])) ? $_POST['sub_mail'] : '';
+$name     = (isset($_POST['name']))     ? trim($_POST['name']) : '';
+$phone    = (isset($_POST['phone']))    ? trim($_POST['phone']) : '';
+$email    = (isset($_POST['email']))    ? trim($_POST['email']) : '';
+$message  = ($_POST['message'])         ? trim($_POST['message']) : 'User left blank…';
+$sub_mail = (isset($_POST['sub_mail'])) ? trim($_POST['sub_mail']) : '';
 
 $title = "A new message from site Best Tour Plan";
 $body = "
