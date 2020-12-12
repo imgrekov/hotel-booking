@@ -21,7 +21,7 @@ $body = "
 if ($email) {
   $title = "Modal window. A new message from site Best Tour Plan";
   $body = "
-    <h2>Новое письмо</h2>
+    <h2>New mail</h2>
     <b>Name:</b> $name<br>
     <b>Phone:</b> $phone<br>
     <b>Email:</b> $email<br><br>
