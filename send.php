@@ -7,33 +7,33 @@ require 'phpmailer/Exception.php';
 $name     = (isset($_POST['name'])) ? $_POST['name'] : '';
 $phone    = (isset($_POST['phone'])) ? $_POST['phone'] : '';
 $email    = (isset($_POST['email'])) ? $_POST['email'] : '';
-$message  = ($_POST['message']) ? $_POST['message'] : 'Пользователь оставил поле пустым…';
+$message  = ($_POST['message']) ? $_POST['message'] : 'User left blank…';
 $sub_mail = (isset($_POST['sub_mail'])) ? $_POST['sub_mail'] : '';
 
-$title = "Новое сообщение с сайта Best Tour Plan";
+$title = "A new message from site Best Tour Plan";
 $body = "
-  <h2>Новое письмо</h2>
-  <b>Имя:</b> $name<br>
-  <b>Телефон:</b> $phone<br><br>
-  <b>Сообщение:</b><br>$message
+  <h2>New mail</h2>
+  <b>Name:</b> $name<br>
+  <b>Phone:</b> $phone<br><br>
+  <b>Message:</b><br>$message
 ";
 
 if ($email) {
-  $title = "Модальное окно. Новое сообщение с сайта Best Tour Plan";
+  $title = "Modal window. A new message from site Best Tour Plan";
   $body = "
     <h2>Новое письмо</h2>
-    <b>Имя:</b> $name<br>
-    <b>Телефон:</b> $phone<br>
-    <b>Почта:</> $email<br><br>
-    <b>Сообщение:</b><br>$message
+    <b>Name:</b> $name<br>
+    <b>Phone:</b> $phone<br>
+    <b>Email:</b> $email<br><br>
+    <b>Message:</b><br>$message
   ";
 }
 
 if ($sub_mail) {
-  $title = "Подписка на новости Best Tour Plan";
+  $title = "Subscribe to news Best Tour Plan";
   $body = "
-    <h2>Подписка на новости</h2>
-    <b>mail:</b> $sub_mail<br>
+    <h2>Subscribe to news</h2>
+    <b>Email:</b> $sub_mail<br>
   ";
 }
 
