@@ -55,6 +55,16 @@
         height: 47px
         z-index: -1
         background: url('../images/reviews/quote-before.svg') no-repeat center / cover
+      &::after
+        content: ''
+        position: absolute
+        right: 8.4%
+        top: 42%
+        display: inline-block
+        width: 70px
+        height: 47px
+        z-index: -1
+        background: url('../images/reviews/quote-after.svg') no-repeat center / cover
     &__profile
       margin-bottom: 32px
     &__image
@@ -78,18 +88,11 @@
     &__stars
       justify-content: center
     &__text
-      position: relative
+      // position: relative
       margin: 0
       font-size: 12px
       line-height: 160%
       text-align: justify
-      &::after
-        content: ''
-        position: absolute
-        right: -40px
-        top: -20px
-        display: inline-block
-        width: 70px
-        height: 47px
-        z-index: -1
-        background: url('../images/reviews/quote-after.svg') no-repeat center / cover
+      overflow: hidden
+      overflow-y: auto
+      max-height: 114px

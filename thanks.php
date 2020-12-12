@@ -164,7 +164,7 @@
               ?>
             </div>
             <!-- /.hotel-info__descr -->
-            <a href="https://imgrekov.ru/projects/hotel-booking/" class="button button-thx">Back home</a> <!-- /.button -->
+            <a href="https://imgrekov.ru/projects/hotel-booking/" class="button button__thx">Back home</a> <!-- /.button -->
           </div>
           <!-- /.hotel-info -->
         </div>
