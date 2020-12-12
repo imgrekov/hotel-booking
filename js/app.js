@@ -108,7 +108,13 @@ window.addEventListener('DOMContentLoaded', event => {
     document.querySelector('body').classList.remove('overflow--hidden')
   }
 
-  new Bouncer('form')
+  new Bouncer('form', {
+    messages: {
+      patternMismatch: {
+        email: 'Email format: mail@mail.com',
+      },
+    },
+  })
 
   const footerInput = document.querySelector('.footer-form__input')
   footerInput.addEventListener('input', () => (footerInput.value = footerInput.value.replace(/[^a-z]\s/i, '')))
